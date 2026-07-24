@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1000" viewBox="0 0 1600 1000" role="img" aria-labelledby="title desc">
+  <title id="title">AI E-commerce Review Analyzer</title>
+  <desc id="desc">Dashboard-inspired preview for an AI customer review analysis project</desc>
+  <defs>
+    <linearGradient id="background" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#07141f"/>
+      <stop offset="0.55" stop-color="#0d1426"/>
+      <stop offset="1" stop-color="#211432"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#3ee7ff"/>
+      <stop offset="1" stop-color="#a668ff"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.5" cy="0.35" r="0.65">
+      <stop offset="0" stop-color="#3ee7ff" stop-opacity="0.18"/>
+      <stop offset="1" stop-color="#3ee7ff" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1600" height="1000" fill="url(#background)"/>
+  <rect width="1600" height="1000" fill="url(#glow)"/>
+  <g opacity="0.16" stroke="#8defff">
+    <path d="M0 160h1600M0 320h1600M0 480h1600M0 640h1600M0 800h1600"/>
+    <path d="M200 0v1000M400 0v1000M600 0v1000M800 0v1000M1000 0v1000M1200 0v1000M1400 0v1000"/>
+  </g>
+  <rect x="210" y="195" width="1180" height="610" rx="44" fill="#0b1321" stroke="#94a3b8" stroke-opacity="0.24" stroke-width="3"/>
+  <rect x="270" y="260" width="650" height="28" rx="14" fill="url(#accent)"/>
+  <rect x="270" y="340" width="470" height="24" rx="12" fill="#94a3b8" opacity="0.32"/>
+  <rect x="270" y="390" width="560" height="24" rx="12" fill="#94a3b8" opacity="0.2"/>
+  <rect x="270" y="440" width="390" height="24" rx="12" fill="#94a3b8" opacity="0.2"/>
+  <g transform="translate(1020 330)">
+    <circle cx="120" cy="120" r="120" fill="none" stroke="#1d2b3c" stroke-width="44"/>
+    <path d="M120 0a120 120 0 0 1 104 180" fill="none" stroke="#3ee7ff" stroke-width="44" stroke-linecap="round"/>
+    <path d="M224 180a120 120 0 0 1-178 32" fill="none" stroke="#a668ff" stroke-width="44" stroke-linecap="round"/>
+  </g>
+  <g transform="translate(270 555)">
+    <rect width="240" height="130" rx="22" fill="#102034" stroke="#3ee7ff" stroke-opacity="0.28"/>
+    <rect x="280" width="240" height="130" rx="22" fill="#102034" stroke="#a668ff" stroke-opacity="0.28"/>
+    <rect x="560" width="240" height="130" rx="22" fill="#102034" stroke="#7ea2ff" stroke-opacity="0.28"/>
+    <path d="M42 91l42-38 38 22 61-49" fill="none" stroke="#3ee7ff" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="397" cy="64" r="34" fill="#a668ff" opacity="0.72"/>
+    <rect x="615" y="42" width="128" height="17" rx="8" fill="#7ea2ff"/>
+    <rect x="615" y="75" width="88" height="17" rx="8" fill="#7ea2ff" opacity="0.45"/>
+  </g>
+  <text x="800" y="890" fill="#f6f8ff" font-family="Arial, sans-serif" font-size="58" font-weight="700" text-anchor="middle">AI E-COMMERCE REVIEW ANALYZER</text>
+  <text x="800" y="940" fill="#94a3b8" font-family="Arial, sans-serif" font-size="25" text-anchor="middle">Sentiment • Classification • Urgency • Insights</text>
+</svg>

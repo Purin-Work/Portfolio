@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1000" viewBox="0 0 1600 1000" role="img" aria-labelledby="title desc">
+  <title id="title">Banker’s Algorithm Simulator</title>
+  <desc id="desc">Operating system resource allocation matrix and safe sequence visualization</desc>
+  <defs>
+    <linearGradient id="background" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#07141f"/>
+      <stop offset="0.55" stop-color="#0d1426"/>
+      <stop offset="1" stop-color="#211432"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#3ee7ff"/>
+      <stop offset="1" stop-color="#a668ff"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.5" cy="0.35" r="0.7">
+      <stop offset="0" stop-color="#3ee7ff" stop-opacity="0.17"/>
+      <stop offset="1" stop-color="#3ee7ff" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1600" height="1000" fill="url(#background)"/>
+  <rect width="1600" height="1000" fill="url(#glow)"/>
+  <g opacity="0.14" stroke="#8defff">
+    <path d="M0 160h1600M0 320h1600M0 480h1600M0 640h1600M0 800h1600"/>
+    <path d="M200 0v1000M400 0v1000M600 0v1000M800 0v1000M1000 0v1000M1200 0v1000M1400 0v1000"/>
+  </g>
+  <rect x="175" y="165" width="1250" height="650" rx="42" fill="#0b1321" stroke="#94a3b8" stroke-opacity="0.24" stroke-width="3"/>
+  <rect x="235" y="225" width="1130" height="34" rx="17" fill="url(#accent)" opacity="0.9"/>
+  <g transform="translate(235 315)">
+    <g fill="#102034" stroke="#3ee7ff" stroke-opacity="0.26">
+      <rect width="320" height="315" rx="24"/>
+      <rect x="365" width="320" height="315" rx="24"/>
+      <rect x="730" width="400" height="315" rx="24"/>
+    </g>
+    <g fill="#eefcff" font-family="Arial, sans-serif" font-weight="700">
+      <text x="28" y="50" font-size="27">ALLOCATION</text>
+      <text x="393" y="50" font-size="27">MAX / NEED</text>
+      <text x="758" y="50" font-size="27">SAFE SEQUENCE</text>
+    </g>
+    <g fill="#94a3b8" font-family="monospace" font-size="24">
+      <text x="28" y="105">P0  0 1 0</text><text x="28" y="150">P1  2 0 0</text><text x="28" y="195">P2  3 0 2</text><text x="28" y="240">P3  2 1 1</text>
+      <text x="393" y="105">7 5 3</text><text x="393" y="150">3 2 2</text><text x="393" y="195">9 0 2</text><text x="393" y="240">4 2 2</text>
+    </g>
+    <g fill="none" stroke="#3ee7ff" stroke-width="8" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M775 160h65l34-55 67 110 40-55h92"/>
+    </g>
+    <text x="930" y="275" fill="#7fffc2" font-family="monospace" font-size="30" font-weight="700" text-anchor="middle">SAFE STATE</text>
+  </g>
+  <text x="800" y="895" fill="#f6f8ff" font-family="Arial, sans-serif" font-size="62" font-weight="700" text-anchor="middle">BANKER’S ALGORITHM SIMULATOR</text>
+  <text x="800" y="946" fill="#94a3b8" font-family="Arial, sans-serif" font-size="25" text-anchor="middle">Resource Allocation • Safe Sequence • Deadlock Avoidance</text>
+</svg>
