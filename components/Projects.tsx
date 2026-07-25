@@ -30,7 +30,7 @@ export default function Projects({ locale }: { locale: Locale }) {
         <motion.div layout className="grid gap-5 md:grid-cols-2">
           <AnimatePresence mode="popLayout">
             {filtered.map((project, index) => (
-              <motion.div key={project.id} layout initial={reduce ? false : { opacity: 0, scale: .96 }} animate={{ opacity: 1, scale: 1 }} exit={reduce ? undefined : { opacity: 0, scale: .96 }} transition={{ duration: .25, delay: reduce ? 0 : index * .04 }}>
+              <motion.div key={project.id} layout initial={false} animate={{ opacity: 1, scale: 1 }} exit={reduce ? undefined : { opacity: 0, scale: .96 }} transition={{ duration: .25, delay: reduce ? 0 : index * .04 }}>
                 <ProjectCard project={project} locale={locale} onSelect={() => setSelected(project)} pauseMedia={Boolean(selected)} />
               </motion.div>
             ))}

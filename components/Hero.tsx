@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { motion, useReducedMotion } from "framer-motion";
+import { motion } from "framer-motion";
 import { ArrowDown, ArrowRight, Mail, Phone } from "lucide-react";
 import { portfolio } from "@/data/portfolio";
 import type { Locale } from "@/types/portfolio";
@@ -11,7 +11,6 @@ const icons = { GitHub: GitHubIcon, LinkedIn: LinkedInIcon, Email: Mail, Phone }
 
 export default function Hero({ locale }: { locale: Locale }) {
   const { profile } = portfolio;
-  const reduce = useReducedMotion();
   const transition = { duration: .65, ease: [0.22, 1, 0.36, 1] as const };
 
   return (
@@ -19,7 +18,7 @@ export default function Hero({ locale }: { locale: Locale }) {
       <div className="pointer-events-none absolute left-[8%] top-[22%] size-64 rounded-full bg-cyan-400/8 blur-3xl" />
       <div className="pointer-events-none absolute bottom-[16%] right-[5%] size-72 rounded-full bg-purple-500/10 blur-3xl" />
       <div className="container-shell grid items-center gap-14 lg:grid-cols-[1.15fr_.85fr]">
-        <motion.div initial={reduce ? false : { opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={transition}>
+        <motion.div initial={false} animate={{ opacity: 1, y: 0 }} transition={transition}>
           <p className="mb-2 text-base text-cyan-200 sm:text-lg">{profile.greeting[locale]}</p>
           <h1 className="font-display text-[clamp(3.2rem,10vw,7.7rem)] font-semibold leading-[.88] tracking-[-.065em] text-white">
             {profile.displayName[locale].first}<br />
@@ -54,7 +53,7 @@ export default function Hero({ locale }: { locale: Locale }) {
           </div>
         </motion.div>
 
-        <motion.div initial={reduce ? false : { opacity: 0, scale: .92 }} animate={{ opacity: 1, scale: 1 }} transition={{ ...transition, delay: .15 }} className="relative mx-auto w-full max-w-md">
+        <motion.div initial={false} animate={{ opacity: 1, scale: 1 }} transition={{ ...transition, delay: .15 }} className="relative mx-auto w-full max-w-md">
           <div className="absolute -inset-8 rounded-full bg-gradient-to-br from-cyan-400/15 to-purple-500/15 blur-3xl" />
           <div className="glass relative overflow-hidden rounded-[2rem] p-3">
             <div className="relative aspect-[4/5] overflow-hidden rounded-[1.35rem] bg-[#0a1120]">
