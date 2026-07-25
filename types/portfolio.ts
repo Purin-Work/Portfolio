@@ -33,7 +33,6 @@ export interface Profile {
   greeting: LocalizedText;
   roles: Record<Locale, string[]>;
   introduction: LocalizedText;
-  status: LocalizedText;
   profileImage: string;
   education: LocalizedText;
   educationHistory: EducationEntry[];
@@ -57,6 +56,7 @@ export interface Project {
   video?: string;
   technologies: string[];
   github?: string;
+  figma?: string;
   demo?: string;
 }
 

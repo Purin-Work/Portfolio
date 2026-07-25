@@ -32,3 +32,18 @@ export function LinkedInIcon({ size = 24, className }: BrandIconProps) {
     </svg>
   );
 }
+
+export function FigmaIcon({ size = 24, className }: BrandIconProps) {
+  return (
+    <svg
+      width={size}
+      height={size}
+      viewBox="0 0 24 24"
+      fill="currentColor"
+      className={className}
+      aria-hidden="true"
+    >
+      <path d="M8.92 24a4 4 0 0 0 4-4v-4h-4a4 4 0 1 0 0 8Zm-4-12a4 4 0 0 1 4-4h4v8h-4a4 4 0 0 1-4-4Zm0-8a4 4 0 0 1 4-4h4v8h-4a4 4 0 0 1-4-4Zm8-4h4a4 4 0 1 1 0 8h-4V0Zm8 12a4 4 0 1 1-8 0 4 4 0 0 1 8 0Z" />
+    </svg>
+  );
+}
