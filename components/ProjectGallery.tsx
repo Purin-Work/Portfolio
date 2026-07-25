@@ -53,7 +53,7 @@ export default function ProjectGallery({ images, title, locale, variant = "modal
   }, []);
 
   useEffect(() => {
-    if (mediaCount <= 1 || reduceMotion || !isInView || isPaused || pauseVideo) return;
+    if (mediaCount <= 1 || !isInView || isPaused || pauseVideo) return;
 
     const timer = window.setInterval(() => {
       const viewport = viewportRef.current;
@@ -64,7 +64,7 @@ export default function ProjectGallery({ images, title, locale, variant = "modal
       setActiveIndex(nextIndex);
       viewport.scrollTo({
         left: viewport.clientWidth * nextIndex,
-        behavior: nextIndex === currentIndex + 1 ? "smooth" : "auto",
+        behavior: !reduceMotion && nextIndex === currentIndex + 1 ? "smooth" : "auto",
       });
     }, 5000);
 
@@ -100,11 +100,11 @@ export default function ProjectGallery({ images, title, locale, variant = "modal
 
   return (
     <div
-      onMouseEnter={() => setIsPaused(true)}
-      onMouseLeave={() => setIsPaused(false)}
-      onFocusCapture={() => setIsPaused(true)}
-      onBlurCapture={(event) => {
-        if (!event.currentTarget.contains(event.relatedTarget as Node | null)) setIsPaused(false);
+      onPointerEnter={(event) => {
+        if (event.pointerType === "mouse") setIsPaused(true);
+      }}
+      onPointerLeave={(event) => {
+        if (event.pointerType === "mouse") setIsPaused(false);
       }}
     >
       <div className={`group relative overflow-hidden bg-[#060b14] ${variant === "modal" ? "rounded-2xl border border-white/10" : ""}`}>
