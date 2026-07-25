@@ -55,6 +55,7 @@ function ExperienceCard({
           alt={title}
           fill
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 90vw, 1024px"
+          loading="eager"
           className="object-cover transition duration-500 group-hover/image:scale-[1.015]"
           draggable={false}
         />

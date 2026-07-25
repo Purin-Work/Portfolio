@@ -133,7 +133,7 @@ export default function ProjectGallery({ images, title, locale, variant = "modal
                     fill
                     sizes={variant === "card" ? "(max-width: 768px) 100vw, 50vw" : "(max-width: 900px) 95vw, 850px"}
                     quality={75}
-                    loading="lazy"
+                    loading={index === activeIndex ? "eager" : "lazy"}
                     className="object-contain"
                   />
                 )

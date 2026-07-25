@@ -120,6 +120,7 @@ export default function CertificateCarousel({ certificates, locale }: Certificat
                     alt={certificate.title}
                     fill
                     sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                    loading="eager"
                     className="object-contain transition duration-300 group-hover/image:scale-[1.015]"
                   />
                   <span className="absolute right-3 top-3 grid size-9 place-items-center rounded-full border border-white/15 bg-[#080d18]/80 text-white backdrop-blur-md transition group-hover/image:bg-[#101a2b]">
