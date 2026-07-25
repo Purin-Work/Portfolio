@@ -114,6 +114,10 @@ export const portfolio: PortfolioData = {
       id: "fishy-game",
       title: "Fishy Game — AI Party Game (Android)",
       category: "Mobile Application",
+      role: {
+        th: "Frontend Developer & Software Tester",
+        en: "Frontend Developer & Software Tester",
+      },
       description: {
         th: "Fishy Game เป็นเกมปาร์ตี้แนวซ่อนบทบาทที่เล่นร่วมกันผ่านโทรศัพท์มือถือเพียงเครื่องเดียว โดยผู้เล่นผลัดกันส่งต่ออุปกรณ์เพื่อดูบทบาทของตนเอง ในแต่ละรอบ ระบบจะใช้ AI ของ OpenAI สร้างคำถาม คำตอบ และภาพประกอบให้เหมาะกับหมวดหมู่และช่วงอายุที่เลือก ได้แก่ เด็ก วัยรุ่น และผู้ใหญ่ ผู้เล่นจะถูกสุ่มให้รับบทเป็น Hunter, Blue Fish หรือ Red Fish โดยต้องใช้ทักษะการสังเกต การสื่อสาร และการวิเคราะห์ เพื่อค้นหาว่าใครพูดความจริงและใครกำลังหลอกลวง ตั้งแต่การเปิดเผยบทบาท ช่วงเล่าเรื่อง ช่วงไล่ล่า ไปจนถึงการคำนวณคะแนนและจัดอันดับ ทุกขั้นตอนสามารถดำเนินการภายในแอปพลิเคชันได้ทั้งหมด",
         en: "Fishy Game is a hidden-role party game designed to be played using a single mobile device that is passed between players. At the beginning of each round, OpenAI-powered AI generates questions, answers, and illustrations based on the selected category and age group, including children, teenagers, and adults. Players are randomly assigned as the Hunter, Blue Fish, or Red Fish and must use observation, communication, and analytical skills to identify who is telling the truth and who is bluffing. The entire gameplay process—including role assignment, storytelling, hunting, score calculation, and leaderboard management—is handled within the application.",
@@ -126,6 +130,10 @@ export const portfolio: PortfolioData = {
       id: "buemail-system",
       title: "BUemail System",
       category: "Web Application",
+      role: {
+        th: "Full-Stack Developer",
+        en: "Full-Stack Developer",
+      },
       description: {
         th: "BUemail System เป็นเว็บแอปพลิเคชันจำลองระบบอีเมลภายในมหาวิทยาลัย พัฒนาขึ้นเพื่อฝึกการออกแบบระบบเว็บและการจัดการข้อมูลผู้ใช้งาน ภายในระบบมีฟังก์ชันสมัครสมาชิก เข้าสู่ระบบ ดูรายการอีเมล อ่านข้อความ เขียนอีเมลใหม่ และลบอีเมล พร้อมระบบตรวจสอบความถูกต้องของข้อมูล เช่น รูปแบบอีเมล เบอร์โทรศัพท์ และรหัสผ่าน\n\nในส่วนของการออกแบบ ผมได้วาง Customer Journey ตั้งแต่การสมัครสมาชิกและเข้าสู่ระบบ ไปจนถึงการใช้งานกล่องข้อความ การอ่านอีเมล และการส่งข้อความใหม่ เพื่อให้ผู้ใช้งานสามารถเข้าใจขั้นตอนและใช้งานระบบได้ง่ายขึ้น\n\nโปรเจกต์นี้พัฒนาด้วย ASP.NET Core Razor Pages และ C# ใช้ ASP.NET Core Identity สำหรับระบบสมาชิกและการยืนยันตัวตน รวมถึงใช้ Entity Framework Core และ SQL Server ในการจัดการฐานข้อมูล",
         en: "BUemail System is a web application that simulates an internal university email system. It was developed to practice web application design and user data management. The system includes features for user registration, login, viewing email lists, reading messages, composing new emails, and deleting emails. It also includes input validation for information such as email addresses, phone numbers, and passwords.\n\nFor the design process, I created a customer journey covering the entire user flow, from registration and login to inbox navigation, email reading, and message composition. The goal was to make each step clear and easy for users to understand.\n\nThe project was developed using ASP.NET Core Razor Pages and C#. It uses ASP.NET Core Identity for user accounts and authentication, along with Entity Framework Core and SQL Server for database management.",
@@ -167,6 +175,10 @@ export const portfolio: PortfolioData = {
       id: "bankers-algorithm-simulator",
       title: "Banker’s Algorithm Simulator",
       category: "Operating Systems",
+      role: {
+        th: "UX/UI Design",
+        en: "UX/UI Design",
+      },
       description: {
         th: "Banker’s Algorithm Simulator เป็นโปรแกรม GUI สำหรับจำลองการจัดสรรทรัพยากรในระบบปฏิบัติการ และตรวจสอบว่าระบบอยู่ในสถานะปลอดภัยหรือไม่ เพื่อหลีกเลี่ยงปัญหา Deadlock\n\nผู้ใช้สามารถกำหนดจำนวน Process และ Resource Types จากนั้นกรอกข้อมูลในตาราง Allocation, Max และ Available ระบบจะคำนวณค่า Need อัตโนมัติ พร้อมตรวจสอบลำดับการทำงานของแต่ละ Process และแสดงผลว่าเป็น Safe State หรือ Unsafe State / Deadlock Detected\n\nโปรแกรมยังแสดงรายละเอียดการคำนวณ เช่น ค่า Work ก่อนและหลังในแต่ละรอบ สถานะ Finish ของแต่ละ Process และ Safe Sequence แบบทีละขั้นตอน เพื่อช่วยให้ผู้เรียนเข้าใจหลักการทำงานของ Banker’s Algorithm ได้ง่ายขึ้น",
         en: "Banker’s Algorithm Simulator is a GUI application designed to simulate resource allocation in an operating system and determine whether the system is in a safe state in order to avoid deadlock.\n\nUsers can define the number of processes and resource types, then enter values into the Allocation, Max, and Available tables. The system automatically calculates the Need Matrix, checks the execution sequence of each process, and displays whether the system is in a Safe State or an Unsafe State / Deadlock Detected condition.\n\nThe application also presents detailed calculation results, including the Work values before and after each step, the Finish Status of each process, and the Safe Sequence in a step-by-step format. This helps users understand the principles and workflow of Banker’s Algorithm more easily.",
@@ -210,6 +222,10 @@ export const portfolio: PortfolioData = {
       id: "ai-ecommerce-review-analyzer",
       title: "AI E-commerce Review Analyzer",
       category: "Artificial Intelligence",
+      role: {
+        th: "Frontend Developer & Software Tester",
+        en: "Frontend Developer & Software Tester",
+      },
       description: {
         th: "AI E-commerce Review Analyzer เป็นโปรเจกต์ที่ออกแบบระบบ AI สำหรับช่วยร้านค้าออนไลน์วิเคราะห์รีวิวและความคิดเห็นจากลูกค้าจำนวนมาก แทนการอ่านและตรวจสอบข้อความทีละรายการ ซึ่งอาจใช้เวลานานและทำให้มองข้ามปัญหาสำคัญที่เกิดขึ้นซ้ำ ๆ ได้\n\nระบบรับข้อความรีวิวจากลูกค้าแล้วนำมาผ่านกระบวนการเตรียมข้อมูล เช่น การทำความสะอาดข้อความและปรับรูปแบบข้อมูล ก่อนใช้ AI วิเคราะห์อารมณ์ของรีวิว แยกประเภทของปัญหา ตรวจสอบระดับความเร่งด่วน ค้นหาคำสำคัญ และสรุปประเด็นหลักให้อยู่ในรูปแบบที่เข้าใจง่าย\n\nผลลัพธ์จะแสดงเป็น Dashboard เพื่อช่วยให้ร้านค้ามองเห็นได้ว่าลูกค้ากำลังพูดถึงเรื่องใดบ่อยที่สุด เช่น ราคา คุณภาพสินค้า การจัดส่ง หรือการบริการ รวมถึงช่วยจัดลำดับว่าปัญหาใดควรได้รับการแก้ไขก่อน ทำให้ผู้ดูแลร้านสามารถตัดสินใจและตอบสนองต่อความคิดเห็นของลูกค้าได้รวดเร็วขึ้น",
         en: "AI E-commerce Review Analyzer is an AI-powered system designed to help online stores analyze large volumes of customer reviews and feedback. It reduces the need to read and inspect each message individually, which can be time-consuming and may cause important recurring issues to be overlooked.\n\nThe system receives customer reviews and processes them through several preparation steps, such as text cleaning and data normalization. It then uses AI to analyze the sentiment of each review, classify the type of issue, evaluate its urgency level, extract important keywords, and summarize the main problem in an easy-to-understand format.\n\nThe results are displayed through a dashboard, allowing store owners to identify the topics customers mention most frequently, such as price, product quality, delivery, or service. The system also helps prioritize which issues should be addressed first, enabling store administrators to make decisions and respond to customer feedback more quickly.",
@@ -247,6 +263,10 @@ export const portfolio: PortfolioData = {
       id: "fall-detection",
       title: "Elderly Fall Monitoring System — IoT",
       category: "IoT",
+      role: {
+        th: "Frontend Developer & Software Tester",
+        en: "Frontend Developer & Software Tester",
+      },
       description: {
         th: "ระบบ IoT สำหรับเฝ้าระวังการล้ม โดย ESP32 อ่านค่าความเร่งจากเซ็นเซอร์ MPU6050 แล้วมองหารูปแบบของการล้ม คือแรงกระแทกสูงตามด้วยการนอนนิ่งผิดปกติ ระบบจะเตือนผ่านจอ OLED ไฟ LED และ buzzer ก่อน และจะส่งแจ้งเตือนจริงก็ต่อเมื่อไม่มีใครกดยกเลิกภายในสิบวินาที เพื่อไม่ให้แค่สะดุดกลายเป็นการเรียกความช่วยเหลือผิดพลาด",
         en: "An IoT prototype that watches for falls. An ESP32 reads acceleration from an MPU6050 and looks for the pattern of a fall: a hard impact followed by the person lying still. It warns on the OLED, LED and buzzer first, and only sends the alert if nobody cancels within ten seconds — so a stumble doesn't call for help by mistake.",

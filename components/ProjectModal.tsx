@@ -57,6 +57,16 @@ export default function ProjectModal({ project, locale, onClose }: { project: Pr
             <div className="relative aspect-[16/8] overflow-hidden rounded-2xl border border-white/10 bg-[#08101e]"><Image src={project.image} alt={`${project.title} detailed project preview`} fill sizes="(max-width: 900px) 95vw, 850px" className="object-cover" /></div>
           )}
           <p className="mt-6 whitespace-pre-line text-base leading-7 text-slate-300">{project.description[locale]}</p>
+          {project.role && (
+            <div className="mt-6 rounded-2xl border border-cyan-300/15 bg-cyan-300/[.045] px-4 py-4 sm:px-5">
+              <p className="text-[11px] font-semibold uppercase tracking-[.16em] text-cyan-200">
+                {locale === "th" ? "หน้าที่รับผิดชอบ" : "Role"}
+              </p>
+              <p className="mt-2 text-sm font-medium text-slate-200 sm:text-base">
+                {project.role[locale]}
+              </p>
+            </div>
+          )}
           {project.highlights?.[locale]?.length ? (
             <ul className="mt-6 space-y-3">
               {project.highlights[locale].map((highlight) => (

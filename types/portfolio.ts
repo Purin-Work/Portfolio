@@ -49,6 +49,7 @@ export interface Project {
   id: string;
   title: string;
   category: ProjectCategory;
+  role?: LocalizedText;
   description: LocalizedText;
   highlights?: Record<Locale, string[]>;
   image: string;
