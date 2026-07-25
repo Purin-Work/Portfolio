@@ -146,7 +146,7 @@ export const portfolio: PortfolioData = {
           "Email deletion",
         ],
       },
-      image: "/projects/BUemail _system/BUemail_system1.png",
+      image: "/projects/BUemail _system/video-poster.jpg",
       images: [
         "/projects/BUemail _system/BUemail_system1.png",
         "/projects/BUemail _system/BUemail_system2.png",
@@ -193,7 +193,7 @@ export const portfolio: PortfolioData = {
           "Uses a GUI to make the algorithm easier to understand",
         ],
       },
-      image: "/projects/Banker’s Algorithm/bankers-algorithm-simulator.svg",
+      image: "/projects/Banker’s Algorithm/video-poster.jpg",
       video: "/projects/Banker’s Algorithm/Banker’s Algorithm.mp4",
       technologies: [
         "Banker’s Algorithm",
@@ -232,7 +232,7 @@ export const portfolio: PortfolioData = {
           "Identifies recurring problems and helps prioritize issues that require attention",
         ],
       },
-      image: "/projects/AI E-commerce Review Analyzer/ai-ecommerce-review-analyzer.svg",
+      image: "/projects/AI E-commerce Review Analyzer/video-poster.jpg",
       video: "/projects/AI E-commerce Review Analyzer/AI E-commerce Review Analyzer.mp4",
       technologies: [
         "OpenAI API",
@@ -265,7 +265,7 @@ export const portfolio: PortfolioData = {
           "Runs end to end in the Wokwi simulator via PlatformIO, so the whole system can be demoed without physical hardware",
         ],
       },
-      image: "/projects/fall-detection.svg",
+      image: "/projects/fall_detection_report/video-poster.jpg",
       video: "/projects/fall_detection_report/Elderly-falls-monitoring-system.mp4",
       technologies: ["ESP32", "C++", "PlatformIO", "Wokwi", "JavaScript", "HTML/CSS"],
       github: "https://github.com/Purin-Work/Elderly-Fall-Monitoring-System",
