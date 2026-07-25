@@ -25,13 +25,14 @@ export default function ProjectVideo({ source, poster, title, paused = false }: 
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting && !reduceMotion) {
+          video.preload = "auto";
           video.muted = true;
           void video.play().catch(() => undefined);
         } else {
           video.pause();
         }
       },
-      { threshold: 0.45 },
+      { rootMargin: "120px 0px", threshold: 0.2 },
     );
 
     observer.observe(video);
@@ -51,7 +52,7 @@ export default function ProjectVideo({ source, poster, title, paused = false }: 
       loop
       playsInline
       controls
-      preload="none"
+      preload="metadata"
       aria-label={`${title} video report`}
     >
       Your browser does not support the video element.
