@@ -23,7 +23,6 @@ export const portfolio: PortfolioData = {
       th: "ผมเป็นนักศึกษาวิทยาการคอมพิวเตอร์ที่สนใจการพัฒนาเว็บแอปพลิเคชันและการออกแบบส่วนหน้าเว็ป รวมถึงการประยุกต์ใช้ AI เพื่อแก้ไขปัญหาและพัฒนาโซลูชันที่สามารถนำไปใช้งานได้จริง",
       en: "A Computer Science student interested in web application development and front-end web design, as well as applying AI to solve problems and develop practical, real-world solutions.",
     },
-    status: { th: "พร้อมสำหรับโอกาสฝึกงาน", en: "Available for Internship" },
     profileImage: "/images/profile.jpg?v=202607231219",
     education: { th: "ปริญญาตรี สาขาวิทยาการคอมพิวเตอร์", en: "Bachelor’s Degree in Computer Science" },
     educationHistory: [
@@ -162,6 +161,7 @@ export const portfolio: PortfolioData = {
         "CSS",
         "SQL Server",
       ],
+      github: "https://github.com/Purin-Work/BUemail-System",
     },
     {
       id: "bankers-algorithm-simulator",
@@ -197,12 +197,14 @@ export const portfolio: PortfolioData = {
       video: "/projects/Banker’s Algorithm/Banker’s Algorithm.mp4",
       technologies: [
         "Banker’s Algorithm",
-        "Deadlock Avoidance",
         "GUI",
-        "Algorithm Simulation",
+        "Pythons",
         "UI/UX Design",
         "Figma",
+        "Gemini 2.5 Flash",
+        "Prompt Engineering",
       ],
+      figma: "https://www.figma.com/design/8jsUEuwkOMWCXXrtEebzYe/Banker-s-Algorithm?node-id=0-1&t=oqdxbycGnOnNGRTd-1",
     },
     {
       id: "ai-ecommerce-review-analyzer",
@@ -239,6 +241,7 @@ export const portfolio: PortfolioData = {
         "Sentiment Analysis",
         "Text Classification",
       ],
+      github: "https://github.com/Purin-Work/AI-E-commerce-Review-Analyzer",
     },
     {
       id: "fall-detection",
@@ -265,6 +268,7 @@ export const portfolio: PortfolioData = {
       image: "/projects/fall-detection.svg",
       video: "/projects/fall_detection_report/Elderly-falls-monitoring-system.mp4",
       technologies: ["ESP32", "C++", "PlatformIO", "Wokwi", "JavaScript", "HTML/CSS"],
+      github: "https://github.com/Purin-Work/Elderly-Fall-Monitoring-System",
     },
   ],
   skillGroups: [

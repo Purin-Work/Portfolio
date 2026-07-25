@@ -20,9 +20,6 @@ export default function Hero({ locale }: { locale: Locale }) {
       <div className="pointer-events-none absolute bottom-[16%] right-[5%] size-72 rounded-full bg-purple-500/10 blur-3xl" />
       <div className="container-shell grid items-center gap-14 lg:grid-cols-[1.15fr_.85fr]">
         <motion.div initial={reduce ? false : { opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={transition}>
-          <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-emerald-300/20 bg-emerald-300/7 px-3 py-1.5 text-xs font-medium text-emerald-200">
-            <span className="pulse-dot size-2 rounded-full bg-emerald-300" />{profile.status[locale]}
-          </div>
           <p className="mb-2 text-base text-cyan-200 sm:text-lg">{profile.greeting[locale]}</p>
           <h1 className="font-display text-[clamp(3.2rem,10vw,7.7rem)] font-semibold leading-[.88] tracking-[-.065em] text-white">
             {profile.displayName[locale].first}<br />
