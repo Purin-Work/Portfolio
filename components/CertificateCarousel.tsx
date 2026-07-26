@@ -35,14 +35,30 @@ export default function CertificateCarousel({ certificates, locale }: Certificat
   const [isAnimating, setIsAnimating] = useState(false);
   const [expandedCertificate, setExpandedCertificate] = useState<CertificateItem | null>(null);
   const animationLock = useRef(false);
+  const animationTimer = useRef<number | null>(null);
   const reduceMotion = useReducedMotion();
   const pageCount = Math.ceil(certificates.length / PAGE_SIZE);
   const visibleCertificates = certificates.slice(page * PAGE_SIZE, page * PAGE_SIZE + PAGE_SIZE);
 
-  const move = (nextDirection: 1 | -1) => {
-    if (pageCount < 2 || animationLock.current) return;
+  const unlockAnimation = () => {
+    if (animationTimer.current !== null) {
+      window.clearTimeout(animationTimer.current);
+      animationTimer.current = null;
+    }
+    animationLock.current = false;
+    setIsAnimating(false);
+  };
+
+  const lockAnimation = () => {
     animationLock.current = true;
     setIsAnimating(true);
+    if (animationTimer.current !== null) window.clearTimeout(animationTimer.current);
+    animationTimer.current = window.setTimeout(unlockAnimation, reduceMotion ? 75 : 550);
+  };
+
+  const move = (nextDirection: 1 | -1) => {
+    if (pageCount < 2 || animationLock.current) return;
+    lockAnimation();
     setDirection(nextDirection);
     setPage((current) => (current + nextDirection + pageCount) % pageCount);
   };
@@ -50,6 +66,10 @@ export default function CertificateCarousel({ certificates, locale }: Certificat
   const transition = reduceMotion
     ? { duration: 0.01 }
     : { duration: 0.4, ease: [0.22, 1, 0.36, 1] as const };
+
+  useEffect(() => () => {
+    if (animationTimer.current !== null) window.clearTimeout(animationTimer.current);
+  }, []);
 
   useEffect(() => {
     if (!expandedCertificate) return;
@@ -99,8 +119,7 @@ export default function CertificateCarousel({ certificates, locale }: Certificat
             transition={transition}
             onAnimationComplete={(definition) => {
               if (definition !== "active") return;
-              animationLock.current = false;
-              setIsAnimating(false);
+              unlockAnimation();
             }}
             className="flex flex-wrap justify-center gap-5"
           >

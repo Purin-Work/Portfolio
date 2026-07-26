@@ -93,17 +93,28 @@ export default function ExperienceCarousel({ items, locale }: ExperienceCarousel
   const [isAnimating, setIsAnimating] = useState(false);
   const [expandedItem, setExpandedItem] = useState<ExperienceItem | null>(null);
   const animationLock = useRef(false);
+  const animationTimer = useRef<number | null>(null);
   const reduceMotion = useReducedMotion();
 
   const unlockAnimation = () => {
+    if (animationTimer.current !== null) {
+      window.clearTimeout(animationTimer.current);
+      animationTimer.current = null;
+    }
     animationLock.current = false;
     setIsAnimating(false);
   };
 
-  const move = (nextDirection: 1 | -1) => {
-    if (items.length < 2 || animationLock.current) return;
+  const lockAnimation = () => {
     animationLock.current = true;
     setIsAnimating(true);
+    if (animationTimer.current !== null) window.clearTimeout(animationTimer.current);
+    animationTimer.current = window.setTimeout(unlockAnimation, reduceMotion ? 75 : 600);
+  };
+
+  const move = (nextDirection: 1 | -1) => {
+    if (items.length < 2 || animationLock.current) return;
+    lockAnimation();
     setDirection(nextDirection);
     setCurrentIndex((index) => (index + nextDirection + items.length) % items.length);
   };
@@ -112,11 +123,14 @@ export default function ExperienceCarousel({ items, locale }: ExperienceCarousel
     if (index === currentIndex || animationLock.current) return;
     const forwardDistance = (index - currentIndex + items.length) % items.length;
     const backwardDistance = (currentIndex - index + items.length) % items.length;
-    animationLock.current = true;
-    setIsAnimating(true);
+    lockAnimation();
     setDirection(forwardDistance <= backwardDistance ? 1 : -1);
     setCurrentIndex(index);
   };
+
+  useEffect(() => () => {
+    if (animationTimer.current !== null) window.clearTimeout(animationTimer.current);
+  }, []);
 
   useEffect(() => {
     if (!expandedItem) return;
