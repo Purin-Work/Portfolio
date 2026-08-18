@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { ArrowUpRight } from "lucide-react";
+import { ArrowUpRight, ExternalLink } from "lucide-react";
 import type { Locale, Project } from "@/types/portfolio";
 import ProjectGallery from "./ProjectGallery";
 import ProjectVideo from "./ProjectVideo";
@@ -46,6 +46,18 @@ export default function ProjectCard({ project, locale, onSelect, pauseMedia = fa
               >
                 <FigmaIcon size={17} />
                 Figma
+              </a>
+            )}
+            {project.demo && (
+              <a
+                href={project.demo}
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex min-h-10 items-center gap-2 rounded-xl border border-cyan-300/25 bg-cyan-300/8 px-3 text-xs font-semibold text-cyan-100 transition hover:border-cyan-200/50 hover:bg-cyan-300/15"
+                aria-label={`${project.title} website demo`}
+              >
+                <ExternalLink size={17} aria-hidden="true" />
+                Website Demo
               </a>
             )}
           </div>
