@@ -16,8 +16,8 @@ export const portfolio: PortfolioData = {
     },
     greeting: { th: "สวัสดีครับ ผมชื่อ", en: "Hello, I’m" },
     roles: {
-      th: ["นักศึกษาวิทยาการคอมพิวเตอร์", "Frontend Development", "AI", "Software Testing"],
-      en: ["Computer Science Student", "Frontend Development", "AI", "Software Testing"],
+      th: ["นักศึกษาวิทยาการคอมพิวเตอร์", "Cyber Security", "Frontend Development", "Software Testing"],
+      en: ["Computer Science Student", "Cyber Security", "Frontend Development", "Software Testing"],
     },
     introduction: {
       th: "ผมเป็นนักศึกษาวิทยาการคอมพิวเตอร์ที่สนใจการพัฒนาเว็บแอปพลิเคชันและการออกแบบส่วนหน้าเว็ป รวมถึงการประยุกต์ใช้ AI เพื่อแก้ไขปัญหาและพัฒนาโซลูชันที่สามารถนำไปใช้งานได้จริง",
@@ -31,7 +31,7 @@ export const portfolio: PortfolioData = {
           th: "โรงเรียนธรรมศาสตร์คลองหลวงวิทยาคม",
           en: "Thammasat Klongluang Wittayakom School",
         },
-        period: { th: "2020 - 2023", en: "2020 - 2023" },
+        period: { th: "2563 - 2566", en: "2020 - 2023" },
         details: {
           th: ["ห้องเรียนพิเศษวิทย์-คณิตทั่วไป", "เกรดเฉลี่ย 3.63"],
           en: ["Science Mathematics Enrichment Program", "(GPA) 3.63"],
@@ -42,7 +42,7 @@ export const portfolio: PortfolioData = {
           th: "มหาวิทยาลัยกรุงเทพ",
           en: "Bangkok University",
         },
-        period: { th: "2023 - ปัจจุบัน", en: "2023 - Recently" },
+        period: { th: "2566 - ปัจจุบัน", en: "2023 - Present" },
         details: {
           th: [
             "คณะเทคโนโลยีสารสนเทศและนวัตกรรม",
@@ -51,7 +51,7 @@ export const portfolio: PortfolioData = {
           ],
           en: [
             "School of Information Technology and Innovation",
-            "Major Computer Science",
+            "Major in Computer Science",
             "(GPA) 3.57",
           ],
         },
@@ -292,7 +292,7 @@ export const portfolio: PortfolioData = {
     },
   ],
   skillGroups: [
-    { title: { th: "ภาษาโปรแกรม", en: "Programming Languages" }, skills: [{ name: "C#", level: "Basic / Familiar" }, { name: "Python", level: "Basic / Familiar" }, { name: "JavaScript", level: "Familiar" }, { name: "HTML", level: "Basic" }, { name: "CSS", level: "Basic" }] },
+    { title: { th: "ภาษาโปรแกรม", en: "Programming Languages" }, skills: [{ name: "C#", level: "Basic" }, { name: "Python", level: "Basic" }, { name: "JavaScript", level: "Basic" }, { name: "HTML", level: "Basic" }, { name: "CSS", level: "Basic" }] },
     { title: { th: "เฟรมเวิร์กและไลบรารี", en: "Frameworks & Libraries" }, skills: [{ name: "Next.js", level: "Basic" }, { name: "React", level: "Basic" }, { name: "Tailwind CSS", level: "Basic" }, { name: ".NET MAUI", level: "Basic" }, { name: "ASP.NET Core Razor Pages", level: "Familiar" }] },
     { title: { th: "ฐานข้อมูล", en: "Databases" }, skills: [{ name: "SQLite", level: "Basic" }, { name: "MySQL", level: "Basic" }] },
     { title: { th: "เครื่องมือและเทคโนโลยี", en: "Tools & Technologies" }, skills: [{ name: "Git & GitHub", level: "Basic" }, { name: "Visual Studio", level: "Basic" }, { name: "VS Code", level: "Basic" }, { name: "Figma", level: "Basic" }, { name: "Wokwi", level: "Basic" }, { name: "RapidMiner", level: "Familiar" }, { name: "Cisco Packet Tracer", level: "Familiar" }] },
