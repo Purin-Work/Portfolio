@@ -111,6 +111,41 @@ export const portfolio: PortfolioData = {
   },
   projects: [
     {
+      id: "job-check-thai",
+      title: "JobCheckThai — Job Scam Detection & Verification Platform",
+      category: "Web Application",
+      role: {
+        th: "Full-stack Developer",
+        en: "Full-stack Developer",
+      },
+      description: {
+        th: "เว็บไซต์สำหรับช่วยผู้หางานตรวจสอบประกาศรับสมัครงานและช่องทางการติดต่อที่น่าสงสัย โดยสามารถตรวจสอบข้อความ ลิงก์ Screenshot และค้นหาประวัติของ LINE ID, Email, เบอร์โทร หรือ Social Media ที่เคยถูกรายงาน เพื่อช่วยให้ผู้ใช้มีข้อมูลประกอบการตัดสินใจก่อนสมัครงาน ส่งข้อมูลส่วนตัว หรือโอนเงิน",
+        en: "A platform that helps job seekers review suspicious job posts and contact channels. Users can check text, links, screenshots, and report histories associated with LINE IDs, email addresses, phone numbers, or social media accounts before applying, sharing personal information, or transferring money.",
+      },
+      highlights: {
+        th: [
+          "Job Post Analysis — ตรวจข้อความและประกาศงานที่น่าสงสัย",
+          "Contact Checker — ค้นหา LINE, Email, เบอร์โทร และ Social Media",
+          "Report Database — เตรียมระบบเก็บประวัติช่องทางที่เคยถูกรายงาน",
+          "Screenshot Analysis — รองรับการอัปโหลดภาพประกาศหรือแชท",
+          "Risk Explanation — อธิบายจุดที่ควรระวังด้วยภาษาที่เข้าใจง่าย",
+          "Scam Awareness — ให้ความรู้เกี่ยวกับ Task Scam, Fake Recruiter และรูปแบบงานหลอกลวงต่าง ๆ",
+        ],
+        en: [
+          "Job Post Analysis — reviews text and job advertisements for suspicious signs",
+          "Contact Checker — searches LINE IDs, email addresses, phone numbers, and social media accounts",
+          "Report Database — prepares a history of contact channels that have previously been reported",
+          "Screenshot Analysis — supports uploads of job-post and chat screenshots",
+          "Risk Explanation — explains warning signs in clear, accessible language",
+          "Scam Awareness — provides guidance about task scams, fake recruiters, and other job-scam patterns",
+        ],
+      },
+      image: "/projects/JobCheckThai/video-poster.png",
+      video: "/projects/JobCheckThai/JobCheckThai-web.mp4",
+      technologies: ["Next.js", "TypeScript", "Tailwind CSS"],
+      demo: "https://job-check-thai.vercel.app/",
+    },
+    {
       id: "fishy-game",
       title: "Fishy Game — AI Party Game (Android)",
       category: "Mobile Application",
