@@ -47,12 +47,12 @@ export const portfolio: PortfolioData = {
           th: [
             "คณะเทคโนโลยีสารสนเทศและนวัตกรรม",
             "สาขา วิทยาการคอมพิวเตอร์",
-            "เกรดเฉลี่ย 3.57",
+            "เกรดเฉลี่ย 3.56",
           ],
           en: [
             "School of Information Technology and Innovation",
             "Major in Computer Science",
-            "(GPA) 3.57",
+            "(GPA) 3.56",
           ],
         },
       },
@@ -112,7 +112,8 @@ export const portfolio: PortfolioData = {
   projects: [
     {
       id: "job-check-thai",
-      title: "JobCheckThai — Job Scam Detection & Verification Platform",
+      title: "JobCheckThai — Job Scam Detection & Verification Platform — 2026",
+      year: 2026,
       category: "Web Application",
       role: {
         th: "Full-stack Developer",
@@ -146,8 +147,63 @@ export const portfolio: PortfolioData = {
       demo: "https://job-check-thai.vercel.app/",
     },
     {
+      id: "smart-lab-management-system",
+      title: "Smart Lab Management System — 2026",
+      year: 2026,
+      category: "Web Application",
+      role: {
+        th: "Frontend Development และ System Testing",
+        en: "Frontend Development & System Testing",
+      },
+      description: {
+        th: "Smart Lab Management System เป็นระบบบริหารจัดการห้องปฏิบัติการคอมพิวเตอร์แบบครบวงจร พัฒนาขึ้นเพื่อช่วยจัดการผู้ใช้งาน ห้องปฏิบัติการ การจองคอมพิวเตอร์ และการใช้งานแบบ Walk-in ผ่านระบบส่วนกลาง พร้อมติดตามสถานะของเครื่องคอมพิวเตอร์ภายในห้องแบบ Real-time\n\nระบบประกอบด้วย 3 ส่วนหลัก ได้แก่ Web Application สำหรับจัดการข้อมูลและการจอง, Tracking Agent ที่ติดตั้งบนเครื่องคอมพิวเตอร์เพื่อรายงานสถานะและรับคำสั่งจากส่วนกลาง และ FaceScan สำหรับยืนยันตัวตนก่อนเข้าใช้งานห้องด้วย Face Recognition พร้อมระบบ Anti-Spoofing เพื่อป้องกันการใช้รูปภาพหรือหน้าจอมาสวมรอย\n\nระบบยังรองรับการกำหนด Role และ Permission, Activity Logs, การส่งคำสั่งไปยังเครื่องคอมพิวเตอร์จากระยะไกล, การบล็อกเว็บไซต์หรือโปรแกรมตาม Policy และการตรวจสอบสถานะเครื่องผ่าน Heartbeat ทำให้เป็นโปรเจกต์ที่ผสมผสานทั้ง Web Development, System Management, AI และแนวคิดด้าน Security เข้าด้วยกัน",
+        en: "Smart Lab Management System is a comprehensive computer laboratory management system designed to centralize user management, laboratory information, computer reservations, and walk-in usage while providing real-time monitoring of computers within each laboratory.\n\nThe system consists of three main components: a Web Application for centralized management and reservations, a Tracking Agent installed on laboratory computers to report device status and receive remote commands, and a FaceScan system that verifies users through facial recognition before laboratory access. An Anti-Spoofing mechanism is also implemented to detect impersonation attempts using photos or screens.\n\nThe system also supports role and permission management, activity logging, remote computer commands, website and application policies, and device monitoring through heartbeat signals. This project combines Web Development, System Management, AI, and Security concepts within a single integrated system.",
+      },
+      highlights: {
+        th: [
+          "ระบบจองคอมพิวเตอร์ล่วงหน้าและ Walk-in",
+          "User, Role & Permission Management",
+          "Real-time Computer Monitoring",
+          "Remote Commands และ Tracking Agent",
+          "Face Recognition สำหรับยืนยันตัวตน",
+          "Face Anti-Spoofing ป้องกันการสวมรอย",
+          "Activity Logs และ Access Logs",
+          "Website / Application Policy Management",
+          "Functional, Security, Offline และ User Acceptance Testing",
+        ],
+        en: [
+          "Advance computer reservations and walk-in usage",
+          "User, role, and permission management",
+          "Real-time computer monitoring",
+          "Remote commands through a Tracking Agent",
+          "Face recognition for identity verification",
+          "Face anti-spoofing to prevent impersonation",
+          "Activity and access logs",
+          "Website and application policy management",
+          "Functional, security, offline, and user acceptance testing",
+        ],
+      },
+      image: "/projects/Smart Lab Management System/1.png",
+      images: Array.from({ length: 10 }, (_, index) => `/projects/Smart Lab Management System/${index + 1}.png`),
+      technologies: [
+        "Next.js",
+        "TypeScript",
+        "Tailwind CSS",
+        "PostgreSQL",
+        "Prisma ORM",
+        "C#",
+        ".NET",
+        "Python",
+        "FastAPI",
+        "face_recognition",
+        "dlib ResNet-34",
+        "MiniFASNetV2",
+      ],
+    },
+    {
       id: "fishy-game",
-      title: "Fishy Game — AI Party Game (Android)",
+      title: "Fishy Game — AI Party Game (Android) — 2026",
+      year: 2026,
       category: "Mobile Application",
       role: {
         th: "Frontend Developer & Software Tester",
@@ -163,7 +219,8 @@ export const portfolio: PortfolioData = {
     },
     {
       id: "buemail-system",
-      title: "BUemail System",
+      title: "BUemail System — 2024",
+      year: 2024,
       category: "Web Application",
       role: {
         th: "Full-Stack Developer",
@@ -208,7 +265,8 @@ export const portfolio: PortfolioData = {
     },
     {
       id: "bankers-algorithm-simulator",
-      title: "Banker’s Algorithm Simulator",
+      title: "Banker’s Algorithm Simulator — 2025",
+      year: 2025,
       category: "Operating Systems",
       role: {
         th: "UX/UI Design",
@@ -255,7 +313,8 @@ export const portfolio: PortfolioData = {
     },
     {
       id: "ai-ecommerce-review-analyzer",
-      title: "AI E-commerce Review Analyzer",
+      title: "AI E-commerce Review Analyzer — 2026",
+      year: 2026,
       category: "Artificial Intelligence",
       role: {
         th: "Frontend Developer & Software Tester",
@@ -296,7 +355,8 @@ export const portfolio: PortfolioData = {
     },
     {
       id: "fall-detection",
-      title: "Elderly Fall Monitoring System — IoT",
+      title: "Elderly Fall Monitoring System — 2026",
+      year: 2026,
       category: "IoT",
       role: {
         th: "Frontend Developer & Software Tester",
@@ -327,7 +387,7 @@ export const portfolio: PortfolioData = {
     },
   ],
   skillGroups: [
-    { title: { th: "ภาษาโปรแกรม", en: "Programming Languages" }, skills: [{ name: "C#", level: "Basic" }, { name: "Python", level: "Basic" }, { name: "JavaScript", level: "Basic" }, { name: "HTML", level: "Basic" }, { name: "CSS", level: "Basic" }] },
+    { title: { th: "ภาษาโปรแกรม", en: "Programming Languages" }, skills: [{ name: "C#", level: "Basic" }, { name: "Python", level: "Basic" }, { name: "JavaScript", level: "Basic" }, { name: "HTML", level: "Basic" }, { name: "CSS", level: "Basic" }, { name: "SQL", level: "Basic" }] },
     { title: { th: "เฟรมเวิร์กและไลบรารี", en: "Frameworks & Libraries" }, skills: [{ name: "Next.js", level: "Basic" }, { name: "React", level: "Basic" }, { name: "Tailwind CSS", level: "Basic" }, { name: ".NET MAUI", level: "Basic" }, { name: "ASP.NET Core Razor Pages", level: "Familiar" }] },
     { title: { th: "ฐานข้อมูล", en: "Databases" }, skills: [{ name: "SQLite", level: "Basic" }, { name: "MySQL", level: "Basic" }] },
     { title: { th: "เครื่องมือและเทคโนโลยี", en: "Tools & Technologies" }, skills: [{ name: "Git & GitHub", level: "Basic" }, { name: "Visual Studio", level: "Basic" }, { name: "VS Code", level: "Basic" }, { name: "Figma", level: "Basic" }, { name: "Wokwi", level: "Basic" }, { name: "RapidMiner", level: "Familiar" }, { name: "Cisco Packet Tracer", level: "Familiar" }] },
