@@ -14,7 +14,12 @@ export default function Projects({ locale }: { locale: Locale }) {
   const [filter, setFilter] = useState<Filter>("All");
   const [selected, setSelected] = useState<Project | null>(null);
   const reduce = useReducedMotion();
-  const filtered = useMemo(() => filter === "All" ? portfolio.projects : portfolio.projects.filter((item) => item.category === filter), [filter]);
+  const filtered = useMemo(
+    () => portfolio.projects
+      .filter((item) => filter === "All" || item.category === filter)
+      .sort((first, second) => second.year - first.year),
+    [filter],
+  );
 
   return (
     <section id="projects" className="projects-section-space bg-white/[.018]">

@@ -48,6 +48,7 @@ export interface Profile {
 export interface Project {
   id: string;
   title: string;
+  year: number;
   category: ProjectCategory;
   role?: LocalizedText;
   description: LocalizedText;
