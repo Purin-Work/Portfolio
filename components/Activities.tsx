@@ -13,7 +13,7 @@ export default function Activities({ locale }: { locale: Locale }) {
         <SectionHeading locale={locale} index="04" title={{ th: "กิจกรรมและการมีส่วนร่วม", en: "Activities & contributions" }} />
         <div className="relative max-w-5xl before:absolute before:bottom-6 before:left-[1.2rem] before:top-6 before:w-px before:bg-gradient-to-b before:from-cyan-300/40 before:to-purple-400/10 sm:before:left-[1.45rem]">
           {portfolio.activities.map((activity, index) => (
-            <Reveal key={`${activity.title.en}-${index}`} className="relative pl-14 sm:pl-20">
+            <Reveal key={`${activity.title.en}-${index}`} delay={index * .06} className="relative pl-14 sm:pl-20">
               <span className="absolute left-2.5 top-6 z-10 grid size-6 place-items-center rounded-full border border-cyan-300/30 bg-[#0b1320] sm:left-[.7rem]"><span className="size-2 rounded-full bg-cyan-300" /></span>
               <article className="glass rounded-3xl p-5 sm:p-7">
                 <div className="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">

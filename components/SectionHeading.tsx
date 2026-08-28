@@ -1,4 +1,5 @@
 import type { Locale } from "@/types/portfolio";
+import Reveal from "./Reveal";
 
 interface SectionHeadingProps {
   locale: Locale;
@@ -10,10 +11,12 @@ interface SectionHeadingProps {
 
 export default function SectionHeading({ locale, index, title, subtitle, align = "left" }: SectionHeadingProps) {
   return (
-    <div className={`mb-10 max-w-2xl ${align === "center" ? "mx-auto text-center" : ""}`}>
-      <p className="eyebrow mb-3">{index} / {title[locale]}</p>
-      <h2 className="font-display text-3xl font-semibold tracking-tight text-white sm:text-4xl lg:text-5xl">{title[locale]}</h2>
-      {subtitle && <p className="muted mt-4 text-base leading-7 sm:text-lg">{subtitle[locale]}</p>}
-    </div>
+    <Reveal>
+      <div className={`mb-10 max-w-2xl ${align === "center" ? "mx-auto text-center" : ""}`}>
+        <p className="eyebrow mb-3">{index} / {title[locale]}</p>
+        <h2 className="font-display text-3xl font-semibold tracking-tight text-white sm:text-4xl lg:text-5xl">{title[locale]}</h2>
+        {subtitle && <p className="muted mt-4 text-base leading-7 sm:text-lg">{subtitle[locale]}</p>}
+      </div>
+    </Reveal>
   );
 }

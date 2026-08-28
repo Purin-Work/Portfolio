@@ -122,7 +122,7 @@ export default function ProjectGallery({ images, title, locale, variant = "modal
           aria-label={locale === "th" ? `แกลเลอรีสื่อ ${title}` : `${title} media gallery`}
         >
           {media.map((item, index) => (
-            <figure key={`${item.type}-${item.source}`} className="relative min-w-full snap-center">
+            <figure key={`${item.type}-${item.source}`} className={`relative min-w-full snap-center ${variant === "card" ? "project-card-visual" : ""}`}>
               {Math.abs(index - activeIndex) <= 1 && (
                 item.type === "video" ? (
                   <ProjectVideo source={item.source} poster={poster ?? images[0]} title={title} paused={pauseVideo} />

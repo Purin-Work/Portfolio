@@ -9,14 +9,16 @@ export default function ProjectCard({ project, locale, onSelect, pauseMedia = fa
   const hasGallery = Boolean(project.images?.length);
 
   return (
-    <article className="glass card-hover group flex h-full flex-col overflow-hidden rounded-3xl">
+    <article className="project-card glass group flex h-full flex-col overflow-hidden rounded-3xl">
       <div className={`relative overflow-hidden border-b border-white/8 bg-[#0b1321] ${hasGallery ? "" : "aspect-[16/10]"}`}>
         {project.images?.length ? (
           <ProjectGallery images={project.images} video={project.video} poster={project.image} title={project.title} locale={locale} variant="card" pauseVideo={pauseMedia} />
         ) : project.video ? (
-          <ProjectVideo source={project.video} poster={project.image} title={project.title} paused={pauseMedia} />
+          <div className="project-card-visual h-full">
+            <ProjectVideo source={project.video} poster={project.image} title={project.title} paused={pauseMedia} />
+          </div>
         ) : (
-          <Image src={project.image} alt={`${project.title} project preview`} fill sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw" className="object-cover transition duration-500 group-hover:scale-[1.03]" />
+          <Image src={project.image} alt={`${project.title} project preview`} fill sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw" className="project-card-visual object-cover" />
         )}
         <span className="absolute left-4 top-4 rounded-full border border-white/10 bg-[#080d18]/80 px-3 py-1.5 text-[10px] font-semibold uppercase tracking-wider text-cyan-100 backdrop-blur-lg">{project.category}</span>
       </div>

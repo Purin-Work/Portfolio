@@ -2,6 +2,7 @@ import ExperienceCarousel from "./ExperienceCarousel";
 import SectionHeading from "./SectionHeading";
 import { experiences } from "@/data/experiences";
 import type { Locale } from "@/types/portfolio";
+import Reveal from "./Reveal";
 
 export default function Experience({ locale }: { locale: Locale }) {
   return (
@@ -12,7 +13,9 @@ export default function Experience({ locale }: { locale: Locale }) {
           index="06"
           title={{ th: "ประสบการณ์การทำงาน", en: "Work Experience" }}
         />
-        <ExperienceCarousel items={experiences} locale={locale} />
+        <Reveal delay={0.06}>
+          <ExperienceCarousel items={experiences} locale={locale} />
+        </Reveal>
       </div>
     </section>
   );
