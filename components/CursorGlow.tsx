@@ -2,7 +2,7 @@
 
 import { useEffect, useRef } from "react";
 
-const GLOW_SIZE = 340;
+const GLOW_SIZE = 280;
 
 export default function CursorGlow() {
   const glowRef = useRef<HTMLDivElement>(null);
