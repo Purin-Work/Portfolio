@@ -187,8 +187,12 @@ html[data-theme="light"] .card-hover:hover { border-color: rgba(8,145,178,.35); 
   will-change: transform;
   contain: strict;
   transition: opacity .3s ease;
+  display: none;
 }
 .cursor-glow[data-visible="true"] { opacity: 1; }
+@media (any-pointer: fine) {
+  .cursor-glow { display: block; }
+}
 body.project-modal-open::after { animation-play-state: paused; }
 .skip-link { position: fixed; left: 1rem; top: -5rem; z-index: 100; padding: .75rem 1rem; background: white; color: #07111f; border-radius: .75rem; }
 .skip-link:focus { top: 1rem; }
@@ -260,9 +264,6 @@ html[data-theme="light"] .theme-icon-dark { display: block; }
     transform: none;
   }
 }
-@media (pointer: coarse) {
-  .cursor-glow { display: none; }
-}
 @media (max-width: 380px) {
   .container-shell { width: min(100% - 1.25rem, 74rem); }
 }
@@ -270,5 +271,4 @@ html[data-theme="light"] .theme-icon-dark { display: block; }
   html { scroll-behavior: auto; }
   *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
   body::before, body::after { animation: none !important; transform: none; }
-  .cursor-glow { display: none; }
 }

@@ -8,9 +8,9 @@ export default function CursorGlow() {
   const glowRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    const finePointer = window.matchMedia("(pointer: fine)");
-    const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
-    if (!finePointer.matches || reducedMotion.matches) return;
+    const finePointer = window.matchMedia("(any-pointer: fine)");
+    const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    if (!finePointer.matches) return;
 
     const glow = glowRef.current;
     if (!glow) return;
@@ -22,8 +22,9 @@ export default function CursorGlow() {
     let currentY = targetY;
 
     const draw = () => {
-      currentX += (targetX - currentX) * 0.28;
-      currentY += (targetY - currentY) * 0.28;
+      const followSpeed = reducedMotion ? 1 : 0.28;
+      currentX += (targetX - currentX) * followSpeed;
+      currentY += (targetY - currentY) * followSpeed;
       glow.style.transform = `translate3d(${currentX - GLOW_SIZE / 2}px, ${currentY - GLOW_SIZE / 2}px, 0)`;
 
       if (Math.abs(targetX - currentX) > 0.1 || Math.abs(targetY - currentY) > 0.1) {
@@ -34,6 +35,10 @@ export default function CursorGlow() {
     };
 
     const moveGlow = (event: PointerEvent) => {
+      if (event.pointerType === "touch") {
+        glow.dataset.visible = "false";
+        return;
+      }
       targetX = event.clientX;
       targetY = event.clientY;
       glow.dataset.visible = "true";
