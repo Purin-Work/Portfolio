@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import { Noto_Sans_Thai, Space_Grotesk } from "next/font/google";
 import { portfolio, siteUrl } from "@/data/portfolio";
 import CursorGlow from "@/components/CursorGlow";
+import ScrollProgress from "@/components/ScrollProgress";
 import "./globals.css";
 
 const sans = Noto_Sans_Thai({
@@ -67,6 +68,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
       </head>
       <body>
         {children}
+        <ScrollProgress />
         <CursorGlow />
       </body>
     </html>
