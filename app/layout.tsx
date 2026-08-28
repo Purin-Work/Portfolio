@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { Noto_Sans_Thai, Space_Grotesk } from "next/font/google";
 import { portfolio, siteUrl } from "@/data/portfolio";
+import CursorGlow from "@/components/CursorGlow";
 import "./globals.css";
 
 const sans = Noto_Sans_Thai({
@@ -47,10 +48,27 @@ export const viewport: Viewport = {
   themeColor: "#070b14",
 };
 
+const themeScript = `
+  (() => {
+    try {
+      const savedTheme = localStorage.getItem("portfolio-theme");
+      document.documentElement.dataset.theme = savedTheme === "light" || savedTheme === "dark" ? savedTheme : "dark";
+    } catch {
+      document.documentElement.dataset.theme = "dark";
+    }
+  })();
+`;
+
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="th" className={`${sans.variable} ${display.variable}`} suppressHydrationWarning>
-      <body>{children}</body>
+      <head>
+        <script dangerouslySetInnerHTML={{ __html: themeScript }} />
+      </head>
+      <body>
+        {children}
+        <CursorGlow />
+      </body>
     </html>
   );
 }

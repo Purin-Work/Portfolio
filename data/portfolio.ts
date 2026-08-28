@@ -20,23 +20,12 @@ export const portfolio: PortfolioData = {
       en: ["Computer Science Student", "Cyber Security", "Frontend Development", "Software Testing"],
     },
     introduction: {
-      th: "ผมเป็นนักศึกษาวิทยาการคอมพิวเตอร์ที่สนใจการพัฒนาเว็บแอปพลิเคชันและการออกแบบส่วนหน้าเว็ป รวมถึงการประยุกต์ใช้ AI เพื่อแก้ไขปัญหาและพัฒนาโซลูชันที่สามารถนำไปใช้งานได้จริง",
-      en: "A Computer Science student interested in web application development and front-end web design, as well as applying AI to solve problems and develop practical, real-world solutions.",
+      th: "ผมเป็นนักศึกษาวิทยาการคอมพิวเตอร์ที่สนใจด้าน Cyber Security และ Frontend Development รวมถึงการประยุกต์ใช้ AI เพื่อแก้ไขปัญหาและพัฒนาโซลูชันที่สามารถนำไปใช้งานได้จริง",
+      en: "A Computer Science student interested in Cyber Security and Frontend Development, as well as applying AI to solve problems and develop practical solutions that can be used in real-world applications.",
     },
     profileImage: "/images/profile.jpg?v=202607231219",
     education: { th: "ปริญญาตรี สาขาวิทยาการคอมพิวเตอร์", en: "Bachelor’s Degree in Computer Science" },
     educationHistory: [
-      {
-        institution: {
-          th: "โรงเรียนธรรมศาสตร์คลองหลวงวิทยาคม",
-          en: "Thammasat Klongluang Wittayakom School",
-        },
-        period: { th: "2563 - 2566", en: "2020 - 2023" },
-        details: {
-          th: ["ห้องเรียนพิเศษวิทย์-คณิตทั่วไป", "เกรดเฉลี่ย 3.63"],
-          en: ["Science Mathematics Enrichment Program", "(GPA) 3.63"],
-        },
-      },
       {
         institution: {
           th: "มหาวิทยาลัยกรุงเทพ",
@@ -46,7 +35,7 @@ export const portfolio: PortfolioData = {
         details: {
           th: [
             "คณะเทคโนโลยีสารสนเทศและนวัตกรรม",
-            "สาขา วิทยาการคอมพิวเตอร์",
+            "สาขาวิทยาการคอมพิวเตอร์",
             "เกรดเฉลี่ย 3.56",
           ],
           en: [
@@ -54,6 +43,17 @@ export const portfolio: PortfolioData = {
             "Major in Computer Science",
             "(GPA) 3.56",
           ],
+        },
+      },
+      {
+        institution: {
+          th: "โรงเรียนธรรมศาสตร์คลองหลวงวิทยาคม",
+          en: "Thammasat Klongluang Wittayakom School",
+        },
+        period: { th: "2563 - 2566", en: "2020 - 2023" },
+        details: {
+          th: ["ห้องเรียนพิเศษวิทย์-คณิตทั่วไป", "เกรดเฉลี่ย 3.63"],
+          en: ["Science Mathematics Enrichment Program", "(GPA) 3.63"],
         },
       },
     ],

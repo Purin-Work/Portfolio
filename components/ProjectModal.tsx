@@ -42,7 +42,7 @@ export default function ProjectModal({ project, locale, onClose }: { project: Pr
   return (
     <motion.div className="fixed inset-0 z-[70] grid place-items-center bg-black/85 p-3 sm:p-6" initial={reduce ? false : { opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} onMouseDown={(event) => event.target === event.currentTarget && onClose()}>
       <motion.div role="dialog" aria-modal="true" aria-labelledby="project-title" initial={reduce ? false : { opacity: 0, y: 30, scale: .98 }} animate={{ opacity: 1, y: 0, scale: 1 }} exit={reduce ? undefined : { opacity: 0, y: 20 }} className="glass max-h-[92vh] w-full max-w-4xl overscroll-contain overflow-y-auto rounded-3xl">
-        <div className="sticky top-0 z-10 flex items-center justify-between border-b border-white/10 bg-[#0a101c]/95 px-5 py-4 sm:px-7">
+        <div className="modal-header sticky top-0 z-10 flex items-center justify-between border-b border-white/10 bg-[#0a101c]/95 px-5 py-4 sm:px-7">
           <div><p className="eyebrow">{project.category}</p><h2 id="project-title" className="font-display mt-1 text-xl font-semibold text-white sm:text-2xl">{project.title}</h2></div>
           <button ref={closeRef} type="button" onClick={onClose} className="grid size-11 shrink-0 place-items-center rounded-xl border border-white/10 text-slate-300 hover:bg-white/5 hover:text-white" aria-label={locale === "th" ? "ปิดรายละเอียด" : "Close details"}><X size={20} /></button>
         </div>

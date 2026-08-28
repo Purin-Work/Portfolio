@@ -57,7 +57,7 @@ export default function About({ locale }: { locale: Locale }) {
                 <div className="relative mt-8 space-y-10 border-l border-cyan-300/20 pl-7 sm:pl-10">
                   {profile.educationHistory.map((item) => (
                     <article key={item.institution.en} className="relative">
-                      <span className="absolute -left-[2.15rem] top-1.5 size-3 rounded-full border-2 border-cyan-200 bg-[#070b14] sm:-left-[2.85rem]" />
+                      <span className="timeline-dot absolute -left-[2.15rem] top-1.5 size-3 rounded-full border-2 border-cyan-200 bg-[#070b14] sm:-left-[2.85rem]" />
                       <div className="flex flex-col gap-2 xl:flex-row xl:items-start xl:justify-between xl:gap-6">
                         <h4 className="font-display text-lg font-semibold leading-7 text-white sm:text-xl">
                           {item.institution[locale]}

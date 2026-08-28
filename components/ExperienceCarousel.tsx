@@ -254,7 +254,7 @@ export default function ExperienceCarousel({ items, locale }: ExperienceCarousel
               type="button"
               onClick={() => goTo(index)}
               disabled={isAnimating}
-              className={`h-2 rounded-full transition-all ${index === currentIndex ? "w-7 bg-cyan-300" : "w-2 bg-white/25 hover:bg-white/50"}`}
+              className={`h-2 rounded-full transition-all ${index === currentIndex ? "gallery-dot-active w-7" : "gallery-dot-inactive w-2"}`}
               aria-label={locale === "th" ? `ไปยังประสบการณ์ที่ ${index + 1}` : `Go to experience ${index + 1}`}
               aria-current={index === currentIndex ? "true" : undefined}
             />

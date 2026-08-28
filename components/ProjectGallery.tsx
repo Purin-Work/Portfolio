@@ -172,7 +172,7 @@ export default function ProjectGallery({ images, title, locale, variant = "modal
                 key={`${item.type}-${item.source}`}
                 type="button"
                 onClick={() => goToSlide(index)}
-                className={`size-1.5 rounded-full transition-all ${index === activeIndex ? "w-5 bg-cyan-200" : "bg-white/35 hover:bg-white/70"}`}
+                className={`size-1.5 rounded-full transition-all ${index === activeIndex ? "gallery-dot-active w-5" : "gallery-dot-inactive"}`}
                 aria-label={locale === "th" ? `ไปยังสื่อที่ ${index + 1}` : `Go to media ${index + 1}`}
                 aria-current={index === activeIndex ? "true" : undefined}
               />
@@ -188,7 +188,7 @@ export default function ProjectGallery({ images, title, locale, variant = "modal
               key={`${item.type}-${item.source}`}
               type="button"
               onClick={() => goToSlide(index)}
-              className={`h-1.5 min-w-1 flex-1 rounded-full transition-colors ${index === activeIndex ? "bg-gradient-to-r from-cyan-300 to-purple-300" : "bg-white/10 hover:bg-white/20"}`}
+              className={`h-1.5 min-w-1 flex-1 rounded-full transition-colors ${index === activeIndex ? "gallery-progress-active" : "gallery-progress-inactive"}`}
               aria-label={locale === "th" ? `ไปยังสื่อที่ ${index + 1}` : `Go to media ${index + 1}`}
               aria-current={index === activeIndex ? "true" : undefined}
             />

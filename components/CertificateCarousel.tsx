@@ -175,7 +175,7 @@ export default function CertificateCarousel({ certificates, locale }: Certificat
               {Array.from({ length: pageCount }, (_, index) => (
                 <span
                   key={index}
-                  className={`h-2 rounded-full transition-all ${index === page ? "w-6 bg-cyan-200" : "w-2 bg-white/20"}`}
+                  className={`h-2 rounded-full transition-all ${index === page ? "gallery-dot-active w-6" : "gallery-dot-inactive w-2"}`}
                   aria-hidden="true"
                 />
               ))}
