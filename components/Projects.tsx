@@ -35,23 +35,24 @@ export default function Projects({ locale }: { locale: Locale }) {
             ))}
           </div>
         </Reveal>
-        <motion.div layout className="grid gap-5 md:grid-cols-2">
-          <AnimatePresence mode="popLayout">
-            {filtered.map((project, index) => (
-              <motion.div
-                key={project.id}
-                layout
-                initial={reduce ? false : { opacity: 0, y: 18 }}
-                whileInView={reduce ? undefined : { opacity: 1, y: 0 }}
-                viewport={{ once: true, amount: 0.1 }}
-                exit={reduce ? undefined : { opacity: 0, scale: .96 }}
-                transition={{ duration: .5, delay: reduce ? 0 : Math.min(index * .05, .2), ease: [0.22, 1, 0.36, 1] }}
-              >
-                <ProjectCard project={project} locale={locale} onSelect={() => setSelected(project)} pauseMedia={Boolean(selected)} />
-              </motion.div>
-            ))}
-          </AnimatePresence>
-        </motion.div>
+        <Reveal delay={0.06}>
+          <motion.div layout className="grid gap-5 md:grid-cols-2">
+            <AnimatePresence mode="popLayout">
+              {filtered.map((project, index) => (
+                <motion.div
+                  key={project.id}
+                  layout
+                  initial={reduce ? false : { opacity: 0, y: 12 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={reduce ? undefined : { opacity: 0, scale: .96 }}
+                  transition={{ duration: .38, delay: reduce ? 0 : Math.min(index * .035, .14), ease: [0.22, 1, 0.36, 1] }}
+                >
+                  <ProjectCard project={project} locale={locale} onSelect={() => setSelected(project)} pauseMedia={Boolean(selected)} />
+                </motion.div>
+              ))}
+            </AnimatePresence>
+          </motion.div>
+        </Reveal>
       </div>
       <AnimatePresence>{selected && <ProjectModal project={selected} locale={locale} onClose={() => setSelected(null)} />}</AnimatePresence>
     </section>
