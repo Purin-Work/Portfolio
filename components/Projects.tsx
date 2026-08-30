@@ -42,7 +42,7 @@ export default function Projects({ locale }: { locale: Locale }) {
                 <motion.div
                   key={project.id}
                   layout
-                  initial={reduce ? false : { opacity: 0, y: 12 }}
+                  initial={false}
                   animate={{ opacity: 1, y: 0 }}
                   exit={reduce ? undefined : { opacity: 0, scale: .96 }}
                   transition={{ duration: .38, delay: reduce ? 0 : Math.min(index * .035, .14), ease: [0.22, 1, 0.36, 1] }}
