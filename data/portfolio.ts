@@ -16,12 +16,12 @@ export const portfolio: PortfolioData = {
     },
     greeting: { th: "สวัสดีครับ ผมชื่อ", en: "Hello, I’m" },
     roles: {
-      th: ["นักศึกษาวิทยาการคอมพิวเตอร์", "Cyber Security", "Frontend Development", "Software Testing"],
-      en: ["Computer Science Student", "Cyber Security", "Frontend Development", "Software Testing"],
+      th: ["นักศึกษาวิทยาการคอมพิวเตอร์", "Backend Development", "Frontend Development", "Software Testing"],
+      en: ["Computer Science Student", "Backend Development", "Frontend Development", "Software Testing"],
     },
     introduction: {
-      th: "ผมเป็นนักศึกษาวิทยาการคอมพิวเตอร์ที่สนใจด้าน Cyber Security และ Frontend Development รวมถึงการประยุกต์ใช้ AI เพื่อแก้ไขปัญหาและพัฒนาโซลูชันที่สามารถนำไปใช้งานได้จริง",
-      en: "A Computer Science student interested in Cyber Security and Frontend Development, as well as applying AI to solve problems and develop practical solutions that can be used in real-world applications.",
+      th: "ผมเป็นนักศึกษาวิทยาการคอมพิวเตอร์ที่สนใจด้าน Backend Development และมีพื้นฐานด้าน Frontend Development รวมถึงสนใจการประยุกต์ใช้ AI เพื่อช่วยแก้ไขปัญหาและพัฒนาโซลูชันที่สามารถนำไปใช้งานได้จริง",
+      en: "I am a Computer Science student interested in Backend Development, with a foundation in Frontend Development. I am also interested in applying AI to solve problems and develop practical solutions that can be used in real-world applications.",
     },
     profileImage: "/images/profile.jpg?v=202607231219",
     education: { th: "ปริญญาตรี สาขาวิทยาการคอมพิวเตอร์", en: "Bachelor’s Degree in Computer Science" },
@@ -387,10 +387,11 @@ export const portfolio: PortfolioData = {
     },
   ],
   skillGroups: [
-    { title: { th: "ภาษาโปรแกรม", en: "Programming Languages" }, skills: [{ name: "C#", level: "Basic" }, { name: "Python", level: "Basic" }, { name: "JavaScript", level: "Basic" }, { name: "HTML", level: "Basic" }, { name: "CSS", level: "Basic" }, { name: "SQL", level: "Basic" }] },
-    { title: { th: "เฟรมเวิร์กและไลบรารี", en: "Frameworks & Libraries" }, skills: [{ name: "Next.js", level: "Basic" }, { name: "React", level: "Basic" }, { name: "Tailwind CSS", level: "Basic" }, { name: ".NET MAUI", level: "Basic" }, { name: "ASP.NET Core Razor Pages", level: "Familiar" }] },
-    { title: { th: "ฐานข้อมูล", en: "Databases" }, skills: [{ name: "SQLite", level: "Basic" }, { name: "MySQL", level: "Basic" }] },
-    { title: { th: "เครื่องมือและเทคโนโลยี", en: "Tools & Technologies" }, skills: [{ name: "Git & GitHub", level: "Basic" }, { name: "Visual Studio", level: "Basic" }, { name: "VS Code", level: "Basic" }, { name: "Figma", level: "Basic" }, { name: "Wokwi", level: "Basic" }, { name: "RapidMiner", level: "Familiar" }, { name: "Cisco Packet Tracer", level: "Familiar" }] },
+    { title: { th: "การเขียนโปรแกรม", en: "Programming" }, skills: [{ name: "C#", level: "Basic" }, { name: "JavaScript", level: "Basic" }, { name: "TypeScript", level: "Basic" }, { name: "Python", level: "Basic" }, { name: "SQL", level: "Basic" }] },
+    { title: { th: "การพัฒนา Backend", en: "Backend Development" }, skills: [{ name: "NestJS", level: "Basic" }, { name: "Node.js", level: "Basic" }, { name: "RESTful APIs", level: "Basic" }, { name: "JWT Authentication", level: "Basic" }] },
+    { title: { th: "การพัฒนา Frontend", en: "Frontend Development" }, skills: [{ name: "HTML", level: "Basic" }, { name: "CSS", level: "Basic" }, { name: "React", level: "Basic" }, { name: "Next.js", level: "Basic" }, { name: "Tailwind CSS", level: "Basic" }] },
+    { title: { th: "ฐานข้อมูล", en: "Database" }, skills: [{ name: "SQL Server", level: "Basic" }, { name: "PostgreSQL", level: "Basic" }, { name: "MySQL", level: "Basic" }] },
+    { title: { th: "เครื่องมือและเทคโนโลยี", en: "Tools & Technologies" }, skills: [{ name: "Git & GitHub", level: "Basic" }, { name: "Visual Studio", level: "Basic" }, { name: "VS Code", level: "Basic" }, { name: "Figma", level: "Basic" }] },
   ],
   activities: [
     {

@@ -1,7 +1,8 @@
 "use client";
 
+import type { PointerEvent as ReactPointerEvent } from "react";
 import Image from "next/image";
-import { motion } from "framer-motion";
+import { motion, useMotionValue, useReducedMotion, useSpring } from "framer-motion";
 import { ArrowDown, ArrowRight, Mail, Phone } from "lucide-react";
 import { portfolio } from "@/data/portfolio";
 import type { Locale } from "@/types/portfolio";
@@ -11,7 +12,28 @@ const icons = { GitHub: GitHubIcon, LinkedIn: LinkedInIcon, Email: Mail, Phone }
 
 export default function Hero({ locale }: { locale: Locale }) {
   const { profile } = portfolio;
+  const reduceMotion = useReducedMotion();
+  const photoTiltX = useMotionValue(0);
+  const photoTiltY = useMotionValue(0);
+  const smoothPhotoTiltX = useSpring(photoTiltX, { stiffness: 180, damping: 24, mass: 0.45 });
+  const smoothPhotoTiltY = useSpring(photoTiltY, { stiffness: 180, damping: 24, mass: 0.45 });
   const transition = { duration: .65, ease: [0.22, 1, 0.36, 1] as const };
+
+  const movePhoto = (event: ReactPointerEvent<HTMLDivElement>) => {
+    if (reduceMotion || event.pointerType === "touch") return;
+    const bounds = event.currentTarget.getBoundingClientRect();
+    const pointerX = (event.clientX - bounds.left) / bounds.width;
+    const pointerY = (event.clientY - bounds.top) / bounds.height;
+    photoTiltX.set((0.5 - pointerY) * 6);
+    photoTiltY.set((pointerX - 0.5) * 6);
+    event.currentTarget.style.setProperty("--photo-pointer-x", `${pointerX * 100}%`);
+    event.currentTarget.style.setProperty("--photo-pointer-y", `${pointerY * 100}%`);
+  };
+
+  const resetPhoto = () => {
+    photoTiltX.set(0);
+    photoTiltY.set(0);
+  };
 
   return (
     <section id="home" className="relative flex min-h-screen items-center overflow-hidden pt-28 pb-16">
@@ -55,11 +77,16 @@ export default function Hero({ locale }: { locale: Locale }) {
 
         <motion.div initial={false} animate={{ opacity: 1, scale: 1 }} transition={{ ...transition, delay: .15 }} className="relative mx-auto w-full max-w-md">
           <div className="absolute -inset-8 rounded-full bg-gradient-to-br from-cyan-400/15 to-purple-500/15 blur-3xl" />
-          <div className="glass relative overflow-hidden rounded-[2rem] p-3">
+          <motion.div
+            className="hero-photo-card glass relative overflow-hidden rounded-[2rem] p-3"
+            style={{ rotateX: smoothPhotoTiltX, rotateY: smoothPhotoTiltY, transformPerspective: 1000 }}
+            onPointerMove={movePhoto}
+            onPointerLeave={resetPhoto}
+          >
             <div className="relative aspect-[4/5] overflow-hidden rounded-[1.35rem] bg-[#0a1120]">
-              <Image src={profile.profileImage} alt={`Profile photo of ${profile.name}`} fill priority sizes="(max-width: 1024px) 90vw, 420px" className="scale-[1.15] object-cover object-[58%_44%]" />
+              <Image src={profile.profileImage} alt={`Profile photo of ${profile.name}`} fill priority sizes="(max-width: 1024px) 90vw, 420px" className="hero-photo-image scale-[1.15] object-cover object-[58%_44%]" />
             </div>
-          </div>
+          </motion.div>
           
         </motion.div>
       </div>
