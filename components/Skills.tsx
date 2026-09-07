@@ -9,25 +9,23 @@ import type { IconType } from "react-icons";
 import { DiMsqlServer, DiVisualstudio } from "react-icons/di";
 import {
   SiCss,
-  SiFigma,
   SiGit,
   SiGithub,
   SiHtml5,
   SiJavascript,
-  SiJsonwebtokens,
   SiMysql,
   SiNestjs,
   SiNextdotjs,
   SiNodedotjs,
-  SiOpenapiinitiative,
   SiPostgresql,
+  SiPrisma,
   SiPython,
   SiReact,
   SiSharp,
   SiTailwindcss,
   SiTypescript,
 } from "react-icons/si";
-import { TbSql } from "react-icons/tb";
+import { TbApi, TbSql } from "react-icons/tb";
 import { VscVscode } from "react-icons/vsc";
 import { portfolio } from "@/data/portfolio";
 import type { Locale, SkillLevel } from "@/types/portfolio";
@@ -43,8 +41,7 @@ const skillLogos: Record<string, { icon: IconType; color: string; secondaryIcon?
   SQL: { icon: TbSql, color: "#38bdf8" },
   NestJS: { icon: SiNestjs, color: "#e0234e" },
   "Node.js": { icon: SiNodedotjs, color: "#339933" },
-  "RESTful APIs": { icon: SiOpenapiinitiative, color: "#6ba539" },
-  "JWT Authentication": { icon: SiJsonwebtokens, color: "#d946ef" },
+  "REST API": { icon: TbApi, color: "#38bdf8" },
   HTML: { icon: SiHtml5, color: "#e34f26" },
   CSS: { icon: SiCss, color: "#663399" },
   React: { icon: SiReact, color: "#61dafb" },
@@ -53,10 +50,10 @@ const skillLogos: Record<string, { icon: IconType; color: string; secondaryIcon?
   "SQL Server": { icon: DiMsqlServer, color: "#cc2927" },
   PostgreSQL: { icon: SiPostgresql, color: "#4169e1" },
   MySQL: { icon: SiMysql, color: "#4479a1" },
+  "Prisma ORM": { icon: SiPrisma, color: "currentColor" },
   "Git & GitHub": { icon: SiGit, color: "#f05032", secondaryIcon: SiGithub, secondaryColor: "currentColor" },
   "Visual Studio": { icon: DiVisualstudio, color: "#a855f7" },
   "VS Code": { icon: VscVscode, color: "#23a8f2" },
-  Figma: { icon: SiFigma, color: "#f24e1e" },
 };
 const levelLabel: Record<SkillLevel, Record<Locale, string>> = {
   Basic: { th: "พื้นฐาน", en: "Basic" },

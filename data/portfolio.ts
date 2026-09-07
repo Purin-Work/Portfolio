@@ -111,13 +111,93 @@ export const portfolio: PortfolioData = {
   },
   projects: [
     {
-      id: "job-check-thai",
-      title: "JobCheckThai — Job Scam Detection & Verification Platform — 2026",
+      id: "teenaitook",
+      title: "TeeNaiTook — IT Product Price Comparison Platform — 2026",
       year: 2026,
       category: "Web Application",
       role: {
         th: "Full-stack Developer",
         en: "Full-stack Developer",
+      },
+      description: {
+        th: "TeeNaiTook เป็นเว็บสำหรับค้นหาและเปรียบเทียบราคาสินค้าไอทีในประเทศไทย ครอบคลุม CPU, GPU, RAM และ SSD จาก Advice, JIB และ iHAVECPU ผู้ใช้สามารถค้นหา กรองตามหมวดหมู่ แบรนด์ ช่วงราคา และสถานะสินค้า รวมถึงดูประวัติราคาเพื่อช่วยตัดสินใจก่อนซื้อ\n\nระบบประกอบด้วย Next.js Frontend, NestJS REST API และ PostgreSQL Database จัดการข้อมูลผ่าน Prisma ORM โดยแยกข้อมูลราคาปัจจุบันออกจากประวัติราคา เพื่อรองรับการวิเคราะห์ราคาและตรวจสอบย้อนหลัง มีระบบผู้ดูแลสำหรับเพิ่มและแก้ไขสินค้า กำหนด URL ร้านค้า ทดสอบการดึงราคา และตรวจสอบสถานะงาน",
+        en: "TeeNaiTook is a Thai IT product price comparison website covering CPUs, GPUs, RAM, and SSDs from Advice, JIB, and iHAVECPU. Users can search products, filter by category, brand, price range, and availability, compare retailer prices, and review price history before purchasing.\n\nThe system consists of a Next.js frontend, a NestJS REST API, and a PostgreSQL database managed with Prisma ORM. Current offers and historical price snapshots are stored separately to support efficient comparisons and historical analysis. An authenticated administration workspace supports product management, retailer source mapping, scraping tests, and job monitoring.",
+      },
+      highlights: {
+        th: [
+          "ระบบค้นหาและตัวกรองตามหมวดหมู่ แบรนด์ ช่วงราคา และสถานะสินค้า",
+          "เปรียบเทียบราคาจากหลายร้านในหน้าเดียว",
+          "กราฟประวัติราคาและการวิเคราะห์แนวโน้มราคา",
+          "ระบบผู้ดูแลสำหรับจัดการสินค้า แหล่งราคา และงานดึงข้อมูล",
+          "รองรับการใช้งานทั้งคอมพิวเตอร์และโทรศัพท์มือถือ",
+          "มีระบบรักษาความปลอดภัยและตรวจสอบความถูกต้องของข้อมูล",
+        ],
+        en: [
+          "Product search and filters by category, brand, price range, and availability",
+          "Multi-retailer price comparison on a single page",
+          "Price-history charts and price trend analysis",
+          "Administration system for managing products, price sources, and data collection jobs",
+          "Responsive interface for desktop and mobile devices",
+          "Secure authentication, URL validation, and data integrity controls",
+        ],
+      },
+      image: "/projects/TeeNaiTook/video-poster.jpg",
+      video: "/projects/TeeNaiTook/TeeNaiTook-web.mp4",
+      technologies: ["Next.js", "React", "TypeScript", "NestJS", "REST API", "PostgreSQL", "Prisma ORM", "Tailwind CSS", "Recharts", "JWT Authentication", "HTTP-only Cookie", "Render", "Neon"],
+      demo: "https://teenaitook-web.vercel.app/",
+    },
+    {
+      id: "bookinghub",
+      title: "BookingHub — 2026",
+      year: 2026,
+      category: "Web Application",
+      role: {
+        th: "Full-stack Developer",
+        en: "Full-stack Developer",
+      },
+      description: {
+        th: "BookingHub คือเว็บแอปพลิเคชันแบบ Full-stack สำหรับค้นหาและจองห้องประชุม ผู้ใช้สามารถสมัครสมาชิก เข้าสู่ระบบ ค้นหาห้องตามทำเล ประเภท และจำนวนผู้ใช้งาน ตรวจสอบห้องว่าง รวมถึงจัดการรายการจองของตนเองได้ ระบบมีหน้า Admin สำหรับดูแลห้อง ผู้ใช้งาน และรายการจอง พร้อมรองรับภาษาไทยและภาษาอังกฤษ\n\nพัฒนาด้วย Next.js และ TypeScript สำหรับ Frontend เชื่อมต่อ REST API ที่สร้างด้วย NestJS ใช้ Prisma ORM และ PostgreSQL บน Neon สำหรับจัดเก็บข้อมูล พร้อมระบบ Authentication, Role-based Access Control และการป้องกันการจองช่วงเวลาซ้ำ ระบบถูกทดสอบด้วย Unit และ End-to-End Tests และ Deploy บน Vercel",
+        en: "BookingHub is a full-stack web application for finding and booking meeting rooms. Users can register, sign in, search for rooms by location, type, and capacity, check availability, and manage their own bookings. The system includes an Admin dashboard for managing rooms, users, and reservations, with support for both Thai and English.\n\nThe frontend is built with Next.js and TypeScript and connects to a REST API developed with NestJS. Prisma ORM and PostgreSQL on Neon are used for data storage, supported by authentication, role-based access control, and overlapping-booking prevention. The system is tested with unit and end-to-end tests, and deployed on Vercel.",
+      },
+      highlights: {
+        th: [
+          "ระบบสมัครสมาชิก เข้าสู่ระบบ ต่ออายุ Session และออกจากระบบ",
+          "แบ่งสิทธิ์ผู้ใช้งานทั่วไปและผู้ดูแลระบบ",
+          "ค้นหา กรอง และตรวจสอบห้องว่าง",
+          "ป้องกันการจองห้องในช่วงเวลาที่ทับซ้อนกัน",
+          "จัดการข้อมูลห้อง ผู้ใช้งาน และรายการจอง",
+          "รองรับภาษาไทยและภาษาอังกฤษ",
+          "Responsive Design รองรับโทรศัพท์และคอมพิวเตอร์",
+          "มี Swagger API Documentation",
+          "มี Unit Tests, E2E Tests และ GitHub Actions CI",
+          "Deploy แยก Frontend และ Backend บน Vercel พร้อม Neon PostgreSQL",
+        ],
+        en: [
+          "Registration, sign-in, session renewal, and sign-out",
+          "Role-based access for standard users and administrators",
+          "Room search, filtering, and availability checking",
+          "Prevention of overlapping room reservations",
+          "Management of rooms, users, and bookings",
+          "Thai and English language support",
+          "Responsive design for mobile and desktop devices",
+          "Swagger API documentation",
+          "Unit tests, E2E tests, and GitHub Actions CI",
+          "Separate frontend and backend deployments on Vercel with Neon PostgreSQL",
+        ],
+      },
+      image: "/projects/BookingHub/BookingHub-poster.jpg",
+      video: "/projects/BookingHub/BookingHub-web.mp4",
+      technologies: ["Next.js", "React", "TypeScript", "NestJS", "Prisma ORM", "PostgreSQL", "Neon", "REST API", "JWT", "Swagger", "Jest", "GitHub Actions"],
+      demo: "https://bookinghub-web.vercel.app/",
+    },
+    {
+      id: "job-check-thai",
+      title: "JobCheckThai — Job Scam Detection & Verification Platform — 2026",
+      year: 2026,
+      category: "Web Application",
+      role: {
+        th: "Front End Developer",
+        en: "Front End Developer",
       },
       description: {
         th: "เว็บไซต์สำหรับช่วยผู้หางานตรวจสอบประกาศรับสมัครงานและช่องทางการติดต่อที่น่าสงสัย โดยสามารถตรวจสอบข้อความ ลิงก์ Screenshot และค้นหาประวัติของ LINE ID, Email, เบอร์โทร หรือ Social Media ที่เคยถูกรายงาน เพื่อช่วยให้ผู้ใช้มีข้อมูลประกอบการตัดสินใจก่อนสมัครงาน ส่งข้อมูลส่วนตัว หรือโอนเงิน",
@@ -152,8 +232,8 @@ export const portfolio: PortfolioData = {
       year: 2026,
       category: "Web Application",
       role: {
-        th: "Frontend Development และ System Testing",
-        en: "Frontend Development & System Testing",
+        th: "Front End Developer และ Software Tester",
+        en: "Front End Developer & Software Tester",
       },
       description: {
         th: "Smart Lab Management System เป็นระบบบริหารจัดการห้องปฏิบัติการคอมพิวเตอร์แบบครบวงจร พัฒนาขึ้นเพื่อช่วยจัดการผู้ใช้งาน ห้องปฏิบัติการ การจองคอมพิวเตอร์ และการใช้งานแบบ Walk-in ผ่านระบบส่วนกลาง พร้อมติดตามสถานะของเครื่องคอมพิวเตอร์ภายในห้องแบบ Real-time\n\nระบบประกอบด้วย 3 ส่วนหลัก ได้แก่ Web Application สำหรับจัดการข้อมูลและการจอง, Tracking Agent ที่ติดตั้งบนเครื่องคอมพิวเตอร์เพื่อรายงานสถานะและรับคำสั่งจากส่วนกลาง และ FaceScan สำหรับยืนยันตัวตนก่อนเข้าใช้งานห้องด้วย Face Recognition พร้อมระบบ Anti-Spoofing เพื่อป้องกันการใช้รูปภาพหรือหน้าจอมาสวมรอย\n\nระบบยังรองรับการกำหนด Role และ Permission, Activity Logs, การส่งคำสั่งไปยังเครื่องคอมพิวเตอร์จากระยะไกล, การบล็อกเว็บไซต์หรือโปรแกรมตาม Policy และการตรวจสอบสถานะเครื่องผ่าน Heartbeat ทำให้เป็นโปรเจกต์ที่ผสมผสานทั้ง Web Development, System Management, AI และแนวคิดด้าน Security เข้าด้วยกัน",
@@ -388,10 +468,10 @@ export const portfolio: PortfolioData = {
   ],
   skillGroups: [
     { title: { th: "การเขียนโปรแกรม", en: "Programming" }, skills: [{ name: "C#", level: "Basic" }, { name: "JavaScript", level: "Basic" }, { name: "TypeScript", level: "Basic" }, { name: "Python", level: "Basic" }, { name: "SQL", level: "Basic" }] },
-    { title: { th: "การพัฒนา Backend", en: "Backend Development" }, skills: [{ name: "NestJS", level: "Basic" }, { name: "Node.js", level: "Basic" }, { name: "RESTful APIs", level: "Basic" }, { name: "JWT Authentication", level: "Basic" }] },
+    { title: { th: "การพัฒนา Backend", en: "Backend Development" }, skills: [{ name: "NestJS", level: "Basic" }, { name: "Node.js", level: "Basic" }, { name: "REST API", level: "Basic" }] },
     { title: { th: "การพัฒนา Frontend", en: "Frontend Development" }, skills: [{ name: "HTML", level: "Basic" }, { name: "CSS", level: "Basic" }, { name: "React", level: "Basic" }, { name: "Next.js", level: "Basic" }, { name: "Tailwind CSS", level: "Basic" }] },
-    { title: { th: "ฐานข้อมูล", en: "Database" }, skills: [{ name: "SQL Server", level: "Basic" }, { name: "PostgreSQL", level: "Basic" }, { name: "MySQL", level: "Basic" }] },
-    { title: { th: "เครื่องมือและเทคโนโลยี", en: "Tools & Technologies" }, skills: [{ name: "Git & GitHub", level: "Basic" }, { name: "Visual Studio", level: "Basic" }, { name: "VS Code", level: "Basic" }, { name: "Figma", level: "Basic" }] },
+    { title: { th: "ฐานข้อมูล", en: "Database" }, skills: [{ name: "SQL Server", level: "Basic" }, { name: "PostgreSQL", level: "Basic" }, { name: "MySQL", level: "Basic" }, { name: "Prisma ORM", level: "Basic" }] },
+    { title: { th: "เครื่องมือและเทคโนโลยี", en: "Tools & Technologies" }, skills: [{ name: "Git & GitHub", level: "Basic" }, { name: "Visual Studio", level: "Basic" }, { name: "VS Code", level: "Basic" }] },
   ],
   activities: [
     {
