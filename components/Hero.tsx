@@ -12,6 +12,7 @@ const icons = { GitHub: GitHubIcon, LinkedIn: LinkedInIcon, Email: Mail, Phone }
 
 export default function Hero({ locale }: { locale: Locale }) {
   const { profile } = portfolio;
+  const introductionParts = profile.introduction[locale].split("Cyber Security");
   const reduceMotion = useReducedMotion();
   const photoTiltX = useMotionValue(0);
   const photoTiltY = useMotionValue(0);
@@ -53,7 +54,14 @@ export default function Hero({ locale }: { locale: Locale }) {
               <p className="mt-1 text-sm text-slate-500 sm:text-base">{profile.roles[locale].slice(1).join(" • ")}</p>
             </div>
           </div>
-          <p className="muted mt-7 max-w-2xl text-sm leading-7 sm:text-base">{profile.introduction[locale]}</p>
+          <p className="muted mt-7 max-w-2xl text-sm leading-7 sm:text-base">
+            {introductionParts.map((part, index) => (
+              <span key={`${locale}-${index}`}>
+                {part}
+                {index < introductionParts.length - 1 ? <strong className="font-bold">Cyber Security</strong> : null}
+              </span>
+            ))}
+          </p>
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
             <a href="#projects" className="group inline-flex min-h-12 items-center justify-center gap-2 rounded-xl bg-white px-5 text-sm font-semibold text-slate-950 transition hover:bg-cyan-100">
               {locale === "th" ? "ดูโปรเจกต์ของผม" : "View my projects"}<ArrowRight size={17} className="transition-transform group-hover:translate-x-1" />
