@@ -16,12 +16,12 @@ export const portfolio: PortfolioData = {
     },
     greeting: { th: "สวัสดีครับ ผมชื่อ", en: "Hello, I’m" },
     roles: {
-      th: ["นักศึกษาวิทยาการคอมพิวเตอร์", "Backend Development", "Frontend Development", "Software Testing"],
-      en: ["Computer Science Student", "Backend Development", "Frontend Development", "Software Testing"],
+      th: ["นักศึกษาวิทยาการคอมพิวเตอร์", "Cyber Security", "Backend Development", "Software Testing"],
+      en: ["Computer Science Student", "Cyber Security", "Backend Development", "Software Testing"],
     },
     introduction: {
-      th: "ผมเป็นนักศึกษาวิทยาการคอมพิวเตอร์ที่สนใจด้าน Backend Development และมีพื้นฐานด้าน Frontend Development รวมถึงสนใจการประยุกต์ใช้ AI เพื่อช่วยแก้ไขปัญหาและพัฒนาโซลูชันที่สามารถนำไปใช้งานได้จริง",
-      en: "I am a Computer Science student interested in Backend Development, with a foundation in Frontend Development. I am also interested in applying AI to solve problems and develop practical solutions that can be used in real-world applications.",
+      th: "ผมเป็นนักศึกษาวิทยาการคอมพิวเตอร์ที่สนใจด้าน Cyber Security และมีพื้นฐานด้าน Backend Development รวมถึงสนใจการประยุกต์ใช้ AI เพื่อช่วยแก้ไขปัญหาและพัฒนาโซลูชันที่สามารถนำไปใช้งานได้จริง",
+      en: "I am a Computer Science student interested in Cyber Security, with a foundation in Backend Development. I am also interested in applying AI to solve problems and develop practical solutions that can be used in real-world applications.",
     },
     profileImage: "/images/profile.jpg?v=202607231219",
     education: { th: "ปริญญาตรี สาขาวิทยาการคอมพิวเตอร์", en: "Bachelor’s Degree in Computer Science" },
