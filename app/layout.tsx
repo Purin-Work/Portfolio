@@ -27,8 +27,8 @@ export const metadata: Metadata = {
     title: `${portfolio.profile.name} — Developer Portfolio`,
     description: portfolio.profile.introduction.en,
     type: "website",
-    locale: "th_TH",
-    alternateLocale: "en_US",
+    locale: "en_US",
+    alternateLocale: "th_TH",
     images: [{ url: "/opengraph-image.svg", width: 1200, height: 630, alt: `${portfolio.profile.name} portfolio` }],
   },
   twitter: {
@@ -62,7 +62,7 @@ const themeScript = `
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="th" className={`${sans.variable} ${display.variable}`} suppressHydrationWarning>
+    <html lang="en" className={`${sans.variable} ${display.variable}`} suppressHydrationWarning>
       <head>
         <script dangerouslySetInnerHTML={{ __html: themeScript }} />
       </head>

@@ -14,7 +14,7 @@ import Footer from "./Footer";
 import type { Locale } from "@/types/portfolio";
 
 export default function PortfolioPage() {
-  const [locale, setLocale] = useState<Locale>("th");
+  const [locale, setLocale] = useState<Locale>("en");
 
   useEffect(() => {
     document.documentElement.lang = locale;
